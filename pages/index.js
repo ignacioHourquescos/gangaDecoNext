@@ -1,12 +1,11 @@
 import Link from 'next/link'; 
-
-
-
+import Menu from 'librerira/Menu'
 const HomePage = () => {
 
     return (
         <div>
-            <h1>Home Page</h1>
+            <Menu>
+            <h1>Home Pageeee</h1>
             <ul>
                 <li>
                     <Link replace href="/product">Prodcuto detalle</Link>
@@ -18,6 +17,7 @@ const HomePage = () => {
                     <Link  href="/faq">pregutnas frecuetnes</Link>
                 </li>
             </ul>
+            </Menu>
         </div>
     )
 
