@@ -1,0 +1,18 @@
+
+@import "../../styles/constants.scss";
+
+.footer_main{
+    background-color: $violet;
+    height:50vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    @media #{$mobile} {
+        height:30vh;
+    }
+}
+
+.svg0{
+    fill:$violet;
+}

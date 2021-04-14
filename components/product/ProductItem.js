@@ -6,6 +6,7 @@ const ProductItem = props =>{
 
     return(
         <>      
+        
         {props.products.map(product =>
             <div className={styles.product_container}>
                 <div className={styles.image_container}>
@@ -38,3 +39,5 @@ const ProductItem = props =>{
 
 
 export default ProductItem;
+
+

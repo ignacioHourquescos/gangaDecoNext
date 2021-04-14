@@ -4,7 +4,7 @@ import styles from './ProductList.module.scss'
 import {useEffect, useState} from 'react';
 import Loader from '../UI/Loader.js'
 import {getProducts} from '../../backend/Sheets';
-import Header from '../general/Header'
+
 
 export default function ProductList() {
 
