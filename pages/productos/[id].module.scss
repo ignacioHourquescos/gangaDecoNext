@@ -1,0 +1,63 @@
+@import "../../styles/constants.scss";
+
+.container{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+    @media #{$mobile} {
+        flex-direction:column;
+    }
+
+
+    .image{
+        -webkit-box-shadow: 10px 11px 6px -6px rgba(209,209,209,1);
+-moz-box-shadow: 10px 11px 6px -6px rgba(209,209,209,1);
+box-shadow: 10px 11px 6px -6px rgba(209,209,209,1);
+        width:400px;
+        background-color: white;;
+        height:400px;
+        border-radius:20px; 
+        .src{
+            object-fit: scale-down;
+            width:400px;
+            height:400px;    
+            border-radius:20px;           
+        }
+    }
+
+
+
+    @media #{$mobile} {
+    .image{
+        
+        .src{
+            object-fit: scale-down;
+            width:400px;
+            max-width:90%;
+            height:400px;
+            padding:5%;
+            max-height:50vh;
+            border-radius:200px;           
+        }
+    }
+}
+
+
+    
+.detail{
+    padding:0 2rem;   
+    display:flex;
+    max-width:40%;
+    flex-direction:column;
+     @media #{$mobile} {
+       padding: 0rem;
+      align-content:flex-start;
+        align-items:flex-start;
+        max-width:100%;
+    }
+
+}
+    
+}
+
