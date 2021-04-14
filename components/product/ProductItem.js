@@ -1,14 +1,22 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import styles from './ProductItem.module.scss'
 
 
 const ProductItem = props =>{
 
+
+    const router = useRouter();
+    const goToProductHandler = (productId) => {
+        const fullPath = `/productos/${productId}`;
+        router.push(fullPath);
+    }
+
     return(
         <>      
         
         {props.products.map(product =>
-            <div className={styles.product_container}>
+            <div  key={product.id} className={styles.product_container} onClick={() => {goToProductHandler(product.id)}}>
                 <div className={styles.image_container}>
                     {
                             product.stock==="no"

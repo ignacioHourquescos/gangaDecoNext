@@ -7,7 +7,7 @@ const Footer= () =>{
 
             <div className={classes.footer_svg}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display: "block"}}>
-                    <path className={classes.svg0} fill-opacity={svg[0].opacity} d={svg[0].svg}/>
+                    <path className={classes.svg0} fillOpacity={svg[0].opacity} d={svg[0].svg}/>
                 </svg>
             </div>
 
