@@ -13,6 +13,7 @@ export default function ProductList() {
     
 	useEffect(() => {
 		getProducts().then((result) => {
+
             //setProducts(result.filter(product => product.stock!="no"));
             setProducts(result);
             setLoading(false);
@@ -30,5 +31,3 @@ export default function ProductList() {
         </>
     )
 }
-
-
