@@ -1,0 +1,32 @@
+
+@import "../../styles/constants.scss";
+
+
+.header_main{
+    background-color: $violet;
+    height:25vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    @media #{$mobile} {
+        height:30vh;
+    }
+}
+
+
+.svg0{
+    fill:$violet;
+}
+
+.image{
+    width:200px;
+    height:200px;
+    transform:translateY(100px);
+    @media #{$mobile} {
+        width:150px;
+        height:150px;
+        transform:translateY(0);
+    }
+    
+}

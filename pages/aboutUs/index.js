@@ -12,6 +12,12 @@ const aboutUs = () => {
 
         <div className={classes.container}>
             <h1 className={classes.titulo}>About us - Quienes somos </h1>
+            <h1 className={classes.titulo}>About us - Quienes somos </h1>
+            <h1 className={classes.titulo}>About us - Quienes somos </h1>
+            <h1 className={classes.titulo}>About us - Quienes somos </h1>
+            <h1 className={classes.titulo}>About us - Quienes somos </h1>
+            <h1 className={classes.titulo}>About us - Quienes somos </h1>
+            <h1 className={classes.titulo}>About us - Quienes somos </h1>
         </div>
 
     )

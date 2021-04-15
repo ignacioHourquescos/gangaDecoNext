@@ -1,0 +1,68 @@
+
+@import "../../styles/constants.scss";
+
+.side_drawer_open{    
+    background-color: rgb(238, 238, 238);
+    height:100vh;
+    margin:0;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    max-width:380px;
+    z-index:200;
+    transform: translateX(0);
+    transition: transform 0.3s;
+
+    
+    ul {
+        height:100%;
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        padding:0;
+        margin:0;
+
+        li{ 
+            margin: 1.3rem 0;
+                 border-bottom:1px solid grey;
+
+            a{
+                color: grey;
+                font-size: 1.5rem;
+                font-family: $font1;
+                text-decoration:none;
+                padding:0 1rem;
+           
+            }
+
+            a:hover{
+                color:red;
+            }
+            a:active{
+                color:orange;
+            }
+        }
+
+    }
+}
+
+
+.side_drawer{
+    background-color: rgb(238, 238, 238);
+    height:100vh;
+    margin:0;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    max-width:400px;
+    z-index:200;
+    transform:translateX(-100%);
+    transition: transform 0.3s;
+
+
+  
+
+}
