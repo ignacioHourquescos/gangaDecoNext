@@ -1,0 +1,36 @@
+/* For demo */
+
+.carrousel_custom{
+ 
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+ 
+    height: 100%;
+    line-height: 160px;
+    background: #0038a0;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: rgb(189, 0, 0);
+   
+  }
+
+  .carrousel_image{
+      height:50vh;
+      
+      background-color: yellow;
+      z-index:1000;
+  }
+
+  .carrousel_image_src{
+      object-fit:contain;
+      height:100%;
+      
+  }
+
+  .carrousel_custom{
+    transform: translateY(-170px);
+    z-index:-100;
+  }

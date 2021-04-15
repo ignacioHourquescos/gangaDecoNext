@@ -90,6 +90,7 @@
         display:flex;
         flex-direction:column;
         align-content:flex-start;
+        justify-content:center;
         text-align:center;
         -webkit-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
         -moz-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
@@ -99,21 +100,26 @@
         .title{
             background-color:white;
             font-size:1rem;
-             color: $color1;
-             font-family: $font1;
+             color: $orange;
+             font-weight: 800;
+             font: $font1;
             padding:0;
             margin:0;
+            margin-bottom:0.5rem;
         }
 
         .price{
-            color:rgba(0, 0, 0, 0.842);
+            color: $grey;
+            font-weight: 600;
             font-size:0.8rem;
-            margin:0;padding:0;
+            font: $font1;
+            margin:0;padding:0;margin-bottom:0.3rem;
         }
 
         .id{
-            color:rgba(0, 0, 0, 0.486);
+            color:$grey;
             font-size:0.6rem;
+            font: $font1;
             border-radius: 0 0 15px 15px;
             margin:0;padding:0;
         }
