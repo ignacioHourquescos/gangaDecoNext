@@ -1,17 +1,20 @@
 import '../styles/globals.css'
+import {useState} from 'react'
 import Layout from '../components/layout/layout'
 import BurgerMenu from '../components/layout/BurgerMenu'
 import Footer from '../components/Footer/Footer'
-import ReactWhatsapp from 'react-whatsapp';
+import Wpp from '../components/wpp/wpp';
 import { getRenderPropValue } from 'antd/lib/_util/getRenderPropValue';
 
 function MyApp({ Component, pageProps }) {
+
+    const [pedido, setPedido]=useState("1 x botella pet%0a2 x Bowl amarillo %0a1 x vasos 300ml");
 
   return (
       <Layout>
 
             <Component {...pageProps} />
-            <ReactWhatsapp className={styles.button} number="1-212-736-5000" message="Hello World!!!" />
+            <Wpp  number="5411 65106333" message={pedido} />
             <Footer/>
     </Layout>
   )
