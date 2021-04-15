@@ -1,20 +1,40 @@
-export function getProducts() {
+// export function  getProducts() {
+
+//     //aca va el link de arriba a la derecha
+//     var id="18b2yH4VG9-5m8RmsZffjbjc6V_phSntqtbR6VxdUhjs";
+//     var sheet="1"
+
+//     return new Promise((resolve) => {
+//         fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
+//             .then(response => response.json())
+//             .then(data => data.feed.entry)
+//             .then(data => ObjectConstructor(data))
+//             .then(data => {resolve(data)})
+//     })
+// }
+
+
+
+export async function  getProducts() {
 
     //aca va el link de arriba a la derecha
     var id="18b2yH4VG9-5m8RmsZffjbjc6V_phSntqtbR6VxdUhjs";
     var sheet="1"
 
-    return new Promise((resolve) => {
-        fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
-            .then(response => response.json())
-            .then(data => data.feed.entry)
-            .then(data => ObjectConstructor(data))
-            .then(data => resolve(data))
-    })
+    const response=await fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
+    const data= await response.json()
+    const result= ObjectConstructor(data.feed.entry);
+    console.log(result)
+    return result;
 }
 
 
+
+
+
+
 const ObjectConstructor = (data) => {
+    let products ={}
     let array = [];
    
     for (var i = 0; i < data.length; i++) {

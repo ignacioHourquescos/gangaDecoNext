@@ -5,14 +5,15 @@
     padding:10%;
     padding-top:0;
     height:100vh;
-
+    background-image: linear-gradient(rgba(255, 255, 255, 0),  rgb(255, 255, 255) 25%);
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items:flex-start;
     align-content:flex-start;
     flex-wrap:wrap;
-    transform: translateY(-100px);
+    padding-top:300px;
+    transform: translateY(-300px);
 
      @media #{$mobile} {
          padding:2%;

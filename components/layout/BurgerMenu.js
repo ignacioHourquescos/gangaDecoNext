@@ -14,12 +14,12 @@ const BurgerMenu = props => {
                 <Link  href="/">LOGOOO</Link>
             </div> */}
             <div className={classes.spacer}></div>
-            <div className={classes.toolbar_navigation_items}>
+            {/* <div className={classes.toolbar_navigation_items}>
                 <ul>
                     <li><Link href="/">Products</Link></li>
                     <li><Link href="/aboutUs">users</Link></li>
                 </ul>
-            </div>
+            </div> */}
         </nav>
     </header>
   );

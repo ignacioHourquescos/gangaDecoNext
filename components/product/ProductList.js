@@ -6,7 +6,9 @@ import Loader from '../UI/Loader.js'
 import {getProducts} from '../../backend/Sheets';
 
 
-export default function ProductList() {
+export default function ProductList (props) {
+    console.log(props.products);
+
 
     const [products, setProducts] = useState();
     const [loading, setLoading] =useState(true);
@@ -31,3 +33,19 @@ export default function ProductList() {
         </>
     )
 }
+
+
+ export async function getStaticProps() {
+     const res = await getProducts();
+    console.log("hola")
+        return {
+             props: {
+               products: res.data,
+             }
+           }
+  
+}
+  
+
+  
+

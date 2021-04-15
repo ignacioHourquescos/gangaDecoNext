@@ -8,7 +8,7 @@ const Header = () =>{
         <div className={classes.container}>
             <div className={classes.header_main}>
               
-                    {/* <img className={classes.image} src="/logo.png" alt="Logo Ganga Deco" /> */}
+                     <img className={classes.image} src="/logo2.png" alt="Logo Ganga Deco" />
               
             </div>
             <div className={classes.header_svg}>

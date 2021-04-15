@@ -1,4 +1,5 @@
 import classes from './Header.module.scss'
+import Link from 'next/link'
 
 import Image from 'next/image'
 
@@ -7,16 +8,20 @@ const Header = () =>{
     return(
         <div className={classes.container}>
             <div className={classes.header_main}>
-              
-                    <img className={classes.image} src="/logo.png" alt="Logo Ganga Deco" />
-              
+            <img className={classes.image} src="/logo2.png" alt="Logo Ganga Deco" />
+                    <Link  href="/"><a className={classes.header_links}>Gangas</a></Link>
+                    <Link  href="/"><a className={classes.header_links}>Como comprar</a></Link>
+                    
+                    <Link  href="/"><a className={classes.header_links}>Quienes somos</a></Link>
+                    <Link  href="/"><a className={classes.header_links}>Contacto</a></Link>
             </div>
             <div className={classes.header_svg}>
+{/* 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path className={classes.svg0} fillOpacity={svg[0].opacity} d={svg[0].svg}/>
                     <path className={classes.svg0} fillOpacity={svg[1].opacity} d={svg[1].svg}/>
                     <path className={classes.svg0} fillOpacity={svg[2].opacity} d={svg[2].svg}/>
-                </svg>
+                </svg> */}
             </div>
 
         </div>
@@ -27,16 +32,14 @@ export default Header;
 
 
 const svg = [
-    {svg:"M0,96L80,106.7C160,117,320,139,480,165.3C640,192,800,224,960,202.7C1120,181,1280,107,\
-    1360,69.3L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z",
-    opacity: "0.7"
+    {svg:"M0,160L120,138.7C240,117,480,75,720,64C960,53,1200,75,1320,85.3L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z",
+    opacity: "0.3"
     },
     {svg:"M0,256L120,218.7C240,181,480,107,720,69.3C960,32,1200,32,1320,32L1440,32L1440,0L1320,\
     0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z",
     opacity: "0.5"
     },
-    {svg:"M0,64L120,58.7C240,53,480,43,720,80C960,117,1200,203,1320,245.3L1440,288L1440,0L1320,\
-    0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z",
+    {svg:"M0,192L120,170.7C240,149,480,107,720,85.3C960,64,1200,64,1320,64L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z",
     opacity: "0.2"
     },
     {svg: "M0,224L60,208C120,192,240,160,360,154.7C480,149,600,171,720,149.3C840,128,960,64,1080\
