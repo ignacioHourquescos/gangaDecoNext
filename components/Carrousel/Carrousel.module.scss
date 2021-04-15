@@ -3,26 +3,22 @@
 
 .ant-carousel .slick-slide {
     text-align: center;
- 
     height: 100%;
     line-height: 160px;
     background: #0038a0;
     overflow: hidden;
-    z-index:-10000;
+
   }
   
   .ant-carousel .slick-slide h3 {
     color: rgb(189, 0, 0);
-    z-index:-10000;
+
    
   }
 
   .carrousel_image{
-      height:100vh;
-      
       background-color: yellow;
-      z-index:1000;
-      z-index:-10000;
+   
   }
 
   .carrousel_image_src{
@@ -44,7 +40,7 @@
     position:relative;
     z-index:-10000;
     @media #{$mobile} {
-        transform: translateY(-100px);
+        // transform: translateY(-100px);
 
        
     }

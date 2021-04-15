@@ -1,0 +1,21 @@
+
+@import "../../styles/constants.scss";
+
+
+    .burgerIcon {
+        width:18px;
+        height:18px;
+        padding:0;
+        text-decoration:none;
+        background-color: transparent;
+        border: none;
+        position: fixed;
+
+
+        @media #{$mobile} {
+            display:none
+           
+        }
+
+    }
+

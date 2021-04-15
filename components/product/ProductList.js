@@ -26,6 +26,7 @@ export default function ProductList (props) {
     return (
 
         <>
+        
 
         <div className={styles.product_list}>
              {loading ? <Loader /> : <ProductItem className={styles.list} products={products} loading={loading} />} 

@@ -15,8 +15,15 @@ export default drawerToggleButton;
 
 const sytles ={
     burgerIcon : {
-        width:'50px',
-        height:'50px',
-        zIndex:'10090'
+        width:'18px',
+        height:'18px',
+        zIndex:'1000',
+        padding:'0',
+        textDecoration:'none',
+        backgroundColor: 'transparent',
+        border: 'none',
+        postion: 'fixed',
+        paddingTop: '1rem'
+
     }
 }
