@@ -11,13 +11,8 @@ const aboutUs = () => {
     return (
 
         <div className={classes.container}>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
+            <h1 className={classes.titulo}>About us - Quienes somos. somos ganga deco </h1>
+       
         </div>
 
     )
