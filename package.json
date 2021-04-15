@@ -8,7 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "next": "^10.0.6",
+=======
+    "bootstrap": "^4.6.0",
+    "next": "10.0.6",
+>>>>>>> 767af6825e2e5bf314df0d53dd305450735c23da
     "react": "17.0.1",
     "react-dom": "17.0.1"
   }

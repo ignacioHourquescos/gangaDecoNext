@@ -1,22 +1,18 @@
 import classes from "./index.module.css" ;
 
 
-const aboutUs = () => {
+const faq = () => {
 
     //siempre el return devuelve un solo componente. un solo div
     //en vez de class es => className (N en mayuscula)
     //className={classes.titulo}
-
-
     return (
 
-        <div className={classes.container}>
-            <h1 className={classes.titulo}>About us - Quienes somos </h1>
+        <div>
+            <h1> Preguntas frecuentes</h1>
         </div>
 
     )
-
-
 }
 
-export default aboutUs
+export default faq
