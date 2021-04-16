@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Image from 'next/image'
 import React from 'react';
 import styles from './ProductItem.module.scss'
 
@@ -31,6 +32,7 @@ const ProductItem = props =>{
                             :
                            ''        
                     }
+                      {/* <Image className={styles.image} src={product.imagen} alt={product.title} width={250} height={160} />  */}
                     <img className={styles.image} alt={product.title} src={product.imagen} />    
                 </div>
                 <div className={styles.data_container}>

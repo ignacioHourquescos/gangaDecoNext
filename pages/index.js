@@ -9,7 +9,7 @@ const HomePage = () => {
 
     return (<>
 
-            <Header/>
+
             <Carrousel/>
             <ProductList/>
         </>
