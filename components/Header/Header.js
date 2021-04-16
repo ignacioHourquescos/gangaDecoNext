@@ -8,12 +8,12 @@ const Header = () =>{
     return(
         <div className={classes.container}>
             <div className={classes.header_main}>
-            <img className={classes.image} src="/logo2.png" alt="Logo Ganga Deco" />
-                    <Link  href="/"><a className={classes.header_links}>Gangas</a></Link>
-                    <Link  href="/"><a className={classes.header_links}>Como comprar</a></Link>
+            <Link  href="/"><img  className={classes.image} src="/logo2.png" alt="Logo Ganga Deco" /></Link>
+                    <Link  href="/gangas"><a className={classes.header_links}>Gangas</a></Link>
+                    <Link  href="/comoComprar"><a className={classes.header_links}>Como comprar</a></Link>
                     
-                    <Link  href="/"><a className={classes.header_links}>Quienes somos</a></Link>
-                    <Link  href="/"><a className={classes.header_links}>Contacto</a></Link>
+                    <Link  href="/aboutUs"><a className={classes.header_links}>Quienes somos</a></Link>
+                    <Link  href="/Contacto"><a className={classes.header_links}>Contacto</a></Link>
             </div>
             <div className={classes.header_svg}>
 {/* 

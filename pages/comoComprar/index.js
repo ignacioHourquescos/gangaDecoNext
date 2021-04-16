@@ -11,3 +11,7 @@ const comoComprar = () => {
 }
 
 export default comoComprar;
+
+
+
+

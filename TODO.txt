@@ -1,0 +1,36 @@
+
+
+A DEFINIR con UX Team
+---------------------------------------------------------------------
+❓ Definir secciones de menu. Cual es el punto de la seccion ganga
+❓ IDea de poner las gangas como carrousel en la home page??
+❓ IDea de hacer un carrito de compra y que se dispare a Wpp
+❓ Definir el tema del descuento, como mostrar la ganga? darle un poco mas de onda
+❓ Fomrulario???
+🌑 Imagen de fondo en svg le falta el tono gris
+
+
+
+
+TODO NICO
+---------------------------------------------------------------------
+🌑 Footer: Completar la grilla 
+🌑 Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
+🌑 Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
+🌑 Quienes Somos - completar segun FIGMA
+
+
+
+TODO NACHO
+---------------------------------------------------------------------
+✅ Terminar Header
+🌗 Implementar boton wpp
+🌑 HAcer el header alternar entre navbar y burgermenu
+🌑 Agregar filtro en homePage
+🌑 implementar getstaticprops de Next 
+🌑 Agregar file de Context
+🌑 Agregar carrito de compra
+
+
+
+

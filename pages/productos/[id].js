@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import {getProductsById }from '../../backend/Sheets'
-import Header2 from '../../components/Header2/Header2'
+
 import classes from './[id].module.scss'
 
 
@@ -24,7 +24,7 @@ function EventDetailPage() {
 
   return (
     <>
-        <Header2/>
+
     {
         loading
         ?<h1>Loading....</h1>
