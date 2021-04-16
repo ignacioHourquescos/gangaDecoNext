@@ -32,8 +32,8 @@ const ProductItem = props =>{
                             :
                            ''        
                     }
-                     <Image className={styles.image} src={'/' + product.imagen} alt={title} width={250} height={160} />
-                    {/* <img className={styles.image} alt={product.title} src={product.imagen} />     */}
+                      {/* <Image className={styles.image} src={product.imagen} alt={product.title} width={250} height={160} />  */}
+                    <img className={styles.image} alt={product.title} src={product.imagen} />    
                 </div>
                 <div className={styles.data_container}>
                     <h3 className={styles.title}>{product.title}</h3>

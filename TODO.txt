@@ -29,8 +29,8 @@ TODO NACHO
 🌑 Agregar filtro en homePage
 🌑 google storage para subir imagenes
 🌑 implementar getstaticprops de Next 
-🌑 Agregar Image HEad de NExt
-
+✅  Agregar Image next
+🌑 Agregar Head
 
 
 
