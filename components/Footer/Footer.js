@@ -17,29 +17,37 @@ const Footer= () =>{
                     </svg>
                 </div>
                 <div className={footerMain}>
-                    <div className='row'>
+                    <div className='row justify-content-between'>
                         <div className='col text-center justify-content-center'> 
-                            <img src="/logo2.png" className={classes.logoFooter} alt="logo ganga deco"/>
-                            <img src='/ig-blanco.png' alt="instagram image"/>
-                            <img src="/fb-blanco.png" alt="facebook image"/>
+                            <row>
+                                <div className='col-12'>
+                                    <img src="/logo2.png" className={classes.logoFooter} alt="logo ganga deco"/>
+                                </div>
+                            </row>
+                                <img src='/instagram.png' className={classes.iconGrandeFooter} alt="instagram image"/>
+                                <img src="/facebook.png" className={classes.iconGrandeFooter} alt="facebook image"/>
                         </div>
-                        <div className='col text-center justify-content-center'>
-                            <h5>Navegación</h5>
-                            <ol>
-                                <li>Home</li>
-                                <li>Nosotros</li>
-                                <li>Productos</li>
-                                <li>Gangas</li>
-                                <li>Cómo comprar</li>
-                                <li>Contacto</li>
-                            </ol>
+                        <div className='col text-center'>
+                            <row>
+                                <div className='col-auto text-left'>
+                                   <h5 className={classes.tituloFooter}>Navegación</h5>
+                                    <ul>
+                                        <li>Home</li>
+                                        <li>Nosotros</li>
+                                        <li>Productos</li>
+                                        <li>Gangas</li>
+                                        <li>Cómo comprar</li>
+                                        <li>Contacto</li>
+                                    </ul>
+                                </div>
+                            </row>
                         </div>
                         <div className='col text-center justify-content-center'>               
-                            <h5>Contactanos</h5>
-                            <ol>
-                                <li><img src="/wap-blanco.png" alt='wathsapp image'/>11-3588-4485</li>
-                                <li><img src="/mail-blanco.png" alt='mail image'/>mail@mail.com</li>
-                            </ol>                
+                            <h5 className={classes.tituloFooter}>Contactanos</h5>
+                            <ul>
+                                <li><img src="/whatsapp.png" className={classes.iconChicoFooter} alt='wathsapp image'/>11-3588-4485</li>
+                                <li><img src="/mail.png" className={classes.iconChicoFooter} alt='mail image'/>mail@mail.com</li>
+                            </ul>                
                         </div>
                     </div>
                 </div>
