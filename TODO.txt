@@ -23,7 +23,7 @@ TODO NICO
 
 TODO NACHO
 ---------------------------------------------------------------------
-✅ Terminar Header
+🌗 Terminar Header achicar logo
 🌗 Implementar boton wpp
 🌑 HAcer el header alternar entre navbar y burgermenu
 🌑 Agregar filtro en homePage

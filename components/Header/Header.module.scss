@@ -28,6 +28,11 @@
     width:10rem;
     height:10rem;
     transform:translateY(25px);
+    -webkit-box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
+    -moz-box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
+    box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
+    border-radius:200px;
+
     @media #{$mobile} {
         width:150px;
         height:150px;
