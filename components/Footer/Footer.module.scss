@@ -1,6 +1,20 @@
 
 @import "../../styles/constants.scss";
 
+.footerMain{
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+    background-color: $violet;
+
+    .logoFooter {
+        width: 174px;
+    }
+}
+
+
+
+
+
 .footer_main{
     background-color: $violet;
     height:50vh;

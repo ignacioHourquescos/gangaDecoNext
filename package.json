@@ -10,8 +10,9 @@
   "dependencies": {
     "antd": "^4.15.1",
     "bootstrap": "^4.6.0",
+    "classnames": "^2.3.1",
     "csshake": "^1.5.3",
-    "next": "10.0.6",
+    "next": "^10.0.6",
     "node-fs": "^0.1.7",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
