@@ -27,7 +27,14 @@ TODO NACHO
 🌗 Implementar boton wpp
 🌑 HAcer el header alternar entre navbar y burgermenu
 🌑 Agregar filtro en homePage
+🌑 google storage para subir imagenes
 🌑 implementar getstaticprops de Next 
+🌑 Agregar Image HEad de NExt
+
+
+
+
+------------------------------------------
 🌑 Agregar file de Context
 🌑 Agregar carrito de compra
 
