@@ -5,7 +5,7 @@ import {getProductsById }from '../../backend/Sheets'
 import head from 'next/head'
 import classes from './[id].module.scss'
 import classNames from 'classnames'
-
+import ProductCarrousel from '../../components/ProductCarrousel/ProductCarrousel'
 
 function EventDetailPage() {
 
@@ -66,6 +66,8 @@ function EventDetailPage() {
                     </div>
                 </div>
             </div>
+
+            <ProductCarrousel/>
 
                       
 {/*                         <div className={classes.detail}>

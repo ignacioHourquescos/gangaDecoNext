@@ -24,7 +24,6 @@ export async function  getProducts() {
     const response=await fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
     const data= await response.json()
     const result= ObjectConstructor(data.feed.entry);
-    console.log(result)
     return result;
 }
 

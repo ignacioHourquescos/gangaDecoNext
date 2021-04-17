@@ -14,16 +14,24 @@ A DEFINIR con UX Team
 
 TODO NICO
 ---------------------------------------------------------------------
-🌑 Footer: Completar la grilla 
-🌑 Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
-🌑 Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
-🌑 Quienes Somos - completar segun FIGMA
+🌗  Footer: Completar la grilla 
+    - ajustar padding de abajo (los logos tocan el fondo)
+    - ajustar margin icosnos telefono mail
+    - ajustar grilla responsive. se rompe un poco
+    - agregar los links a la lista. (copiar como esta hecho en el archivo header. hay que importar Header de next)
+🌗 Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
+    - ajustar a responisve que cambie a felxdirection column
+    - ver articulo "botella de PET" rompe la grilla
+🌖 Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
+    - un poco menos de left y rigth padding en responsive
+🌖 Quienes Somos - completar segun FIGMA
+    - un poco menos de left y rigth padding en responsive
 
 
 
 TODO NACHO
 ---------------------------------------------------------------------
-🌗 Terminar Header achicar logo
+✅ Terminar Header achicar logo
 🌗 Implementar boton wpp
 🌑 HAcer el header alternar entre navbar y burgermenu
 🌑 Agregar filtro en homePage
