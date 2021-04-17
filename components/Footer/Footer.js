@@ -1,23 +1,60 @@
+import head from 'next/head'
 import classes from './Footer.module.scss'
+import classNames from 'classnames'
 
 
 const Footer= () =>{
+    const footerMain = classNames(classes.footerMain,"container-fluid")
     return(
-        <div className={classes.container}>
-
-            <div className={classes.footer_svg}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display: "block"}}>
-                    <path className={classes.svg0} fillOpacity={svg[0].opacity} d={svg[0].svg}/>
-                </svg>
+    <div>
+        <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+        </head>
+            <div>
+                <div className={classes.footer_svg}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display: "block"}}>
+                        <path className={classes.svg0} fillOpacity={svg[0].opacity} d={svg[0].svg}/>
+                    </svg>
+                </div>
+                <div className={footerMain}>
+                    <div className='row justify-content-between'>
+                        <div className='col text-center justify-content-center'> 
+                            <row>
+                                <div className='col-12'>
+                                    <img src="/logo2.png" className={classes.logoFooter} alt="logo ganga deco"/>
+                                </div>
+                            </row>
+                                <img src='/instagram.png' className={classes.iconGrandeFooter} alt="instagram image"/>
+                                <img src="/facebook.png" className={classes.iconGrandeFooter} alt="facebook image"/>
+                        </div>
+                        <div className='col text-center'>
+                            <row>
+                                <div className='col-auto text-left'>
+                                   <h5 className={classes.tituloFooter}>Navegación</h5>
+                                    <ul>
+                                        <li>Home</li>
+                                        <li>Nosotros</li>
+                                        <li>Productos</li>
+                                        <li>Gangas</li>
+                                        <li>Cómo comprar</li>
+                                        <li>Contacto</li>
+                                    </ul>
+                                </div>
+                            </row>
+                        </div>
+                        <div className='col text-center justify-content-center'>               
+                            <h5 className={classes.tituloFooter}>Contactanos</h5>
+                            <ul>
+                                <li><img src="/whatsapp.png" className={classes.iconChicoFooter} alt='wathsapp image'/>11-3588-4485</li>
+                                <li><img src="/mail.png" className={classes.iconChicoFooter} alt='mail image'/>mail@mail.com</li>
+                            </ul>                
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div className={classes.footer_main}>
-                <h1>aca va la data del footer segun prototipo</h1>
-
-            </div>
-
-        </div>
-    )
+    
+    </div>
+        )
 }
 
 export default Footer;

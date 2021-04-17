@@ -1,17 +1,44 @@
 
 @import "../../styles/constants.scss";
 
-.footer_main{
+
+
+.footerMain{
+    padding-left: 10% !important;
+    padding-right: 10% !important;
     background-color: $violet;
-    height:50vh;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    @media #{$mobile} {
-        height:30vh;
+
+    .logoFooter {
+        width: 174px;
+    }
+    .iconGrandeFooter {
+        width: 50px;
+        margin: 33px 12px 0px 12px;
+    }
+    .iconChicoFooter {
+        width: 33px;
+    }
+    .tituloFooter {
+        font-family: $font1;
+        font-weight: 600;
+        font-size: 18px;
+        color: $white;
+    }
+    li {
+        font-family: $font1;
+        font-weight: 400;
+        font-size: 18px;
+        color: $white;
+    }
+    ul, li{
+        margin:0;
+        padding: 0;
+        text-indent: 0;
+        list-style: none;
     }
 }
+
+
 
 .svg0{
     fill:$violet;
