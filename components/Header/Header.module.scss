@@ -3,14 +3,16 @@
 
 
 .header_main{
-    background: linear-gradient($violet,#9978cdb4);
-    height:20vh;
+    // background: linear-gradient($violet,#9978cdb4);
+    height:22vh;
     width:100%;
     display:flex;
     justify-content:center;
+    justify-items: center;
     padding:0 2rem;
+    padding-top:7vh;
     align-items:flex-start;
-    align-content:flex-end;
+    align-content:center;
     z-index:2000;
 
     @media #{$mobile} {
@@ -25,9 +27,10 @@
 }
 
 .image{
-    width:10rem;
-    height:10rem;
-    transform:translateY(25px);
+    width:8rem;
+    height:8rem;
+   
+
     -webkit-box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
     -moz-box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
     box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
@@ -46,12 +49,12 @@
 }
 .header_links{
     font-family:$font1;
-    transform:translateY(60px);
+    padding-top:4vh;
     font-weight: 700;
     font-size:1.5rem;
     margin:0 2rem ;
 
-    color:white;
+    color:#6C6C6C;
     @media #{$mobile} {
         display:none;
 

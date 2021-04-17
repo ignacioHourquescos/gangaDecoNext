@@ -5,8 +5,8 @@ body {
     font-family: 'Open Sans', 'Lato', sans-serif;
     color: #414141;
     background-color: red;
-    background-image: url("../public/fondoFormas.png");
-    background-repeat: repeat-y;
+    background-image: url("../public/Fondo web+color.png");
+    background-size: 100%;
     /* background-color: #e4f1f1; */
     width:100%;
     height:100%;

@@ -8,7 +8,7 @@ const Header = () =>{
     return(
         <div className={classes.container}>
             <div className={classes.header_main}>
-            <Link  href="/"><img  className={classes.image} src="/logo2.png" alt="Logo Ganga Deco" /></Link>
+            <Link  href="/"><img  className={classes.image} src="/Group1.png" alt="Logo Ganga Deco" /></Link>
                     <Link  href="/gangas"><a className={classes.header_links}>Gangas</a></Link>
                     <Link  href="/comoComprar"><a className={classes.header_links}>Como comprar</a></Link>
                     
