@@ -67,7 +67,7 @@ function EventDetailPage() {
                 </div>
             </div>
 
-            <ProductCarrousel/>
+            {/* <ProductCarrousel/> */}
 
                       
 {/*                         <div className={classes.detail}>
