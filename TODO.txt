@@ -26,19 +26,22 @@ TODO NICO
     - un poco menos de left y rigth padding en responsive
 🌖 Quienes Somos - completar segun FIGMA
     - un poco menos de left y rigth padding en responsive
+🌑 HAcer el header alternar entre navbar y burgermenu
+🌑 Agregar Head
 
 
 
 TODO NACHO
 ---------------------------------------------------------------------
 ✅ Terminar Header achicar logo
-🌗 Implementar boton wpp
-🌑 HAcer el header alternar entre navbar y burgermenu
+🌗 Implementar boton wp
+🌑 darle estilo a admin
+🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
 🌑 Agregar filtro en homePage
-🌑 google storage para subir imagenes
-🌑 implementar getstaticprops de Next 
+✅ google storage para subir imagenes
 ✅  Agregar Image next
-🌑 Agregar Head
+
+
 
 
 
