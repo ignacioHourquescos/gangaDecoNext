@@ -4,16 +4,25 @@ import styles from './ProductList.module.scss'
 import {useEffect, useState} from 'react';
 import Loader from '../UI/Loader.js'
 import {getProducts} from '../../backend/Sheets';
-
+import useAppContext from '../../context/AppContext';
 
 export default function ProductList (props) {
-    console.log(props.products);
+    const { cart } = useAppContext();
 
 
+	const [cartItems, setCartItems] = useState([]);
+
+	useEffect(() => {
+		setCartItems(cart);
+	}, [])
+
+
+    
     const [products, setProducts] = useState();
     const [loading, setLoading] =useState(true);
     
 	useEffect(() => {
+    
 		getProducts().then((result) => {
 
             //setProducts(result.filter(product => product.stock!="no"));
@@ -45,13 +54,5 @@ export default function ProductList (props) {
            }
   
 }
-  
-
-
-age.getInitialProps = async (ctx) => {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js')
-    const json = await res.json()
-    return { stars: json.stargazers_count }
-  }
   
 

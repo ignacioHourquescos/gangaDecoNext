@@ -6,8 +6,11 @@ import head from 'next/head'
 import classes from './[id].module.scss'
 import classNames from 'classnames'
 import ProductCarrousel from '../../components/ProductCarrousel/ProductCarrousel'
+import useAppContext from '../../context/AppContext';
 
 function EventDetailPage() {
+
+    const { handleCartArray, cart } = useAppContext();
 
     const [loading, setLoading] = useState(true);
     const [product, setProduct] = useState([]);

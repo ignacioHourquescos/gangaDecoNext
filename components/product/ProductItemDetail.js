@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import React, {useEffect, useState} from 'react';
 import styles from './ProductItemDetail.module.scss'
 import {getImagesFromFirestore, getSingleProductFromDatabase} from '../../backend/Sheets'
+import Loader from '../UI/Loader'
 
 
 const ProductItemDetail = ({product}) =>{
@@ -47,7 +48,7 @@ const ProductItemDetail = ({product}) =>{
                     {
                         loading2
                         ?
-                        <h1>aca imagne</h1>
+                        <Loader/>
                         :
                         <img className={styles.image} alt={product.title} src={image} /> 
 

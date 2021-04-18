@@ -2,11 +2,11 @@
 import './Loader.module.scss'
 
 
-const MyLoader = (props) => (
+const Loader = (props) => (
       <>
             <div className="loader"></div>
       </>
 )
 
-export default MyLoader
+export default Loader
 
