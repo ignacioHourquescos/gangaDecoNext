@@ -7,6 +7,8 @@ import {getProducts} from '../../backend/Sheets';
 
 
 export default function ProductList (props) {
+    console.log(props.products);
+
 
     const [products, setProducts] = useState();
     const [loading, setLoading] =useState(true);
@@ -24,6 +26,7 @@ export default function ProductList (props) {
     return (
 
         <>
+
         <div className={styles.product_list}>
              {loading ? <Loader /> : <ProductItem className={styles.list} products={products} loading={loading} />} 
         </div>
