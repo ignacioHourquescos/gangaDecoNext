@@ -1,5 +1,5 @@
 import FileUpload from '../../firebase/FileUpload'
-import classes from './index.module.scss'
+import classes from './Index.module.scss'
 import { getFirestore } from "../../firebase/index.js";
 import {useState, useEffect} from 'react'
 
@@ -15,9 +15,8 @@ const Admin = () =>{
 
     return(
         <div className={classes.container}>
-        <FileUpload/>
-        <h1>Imagen</h1>
-        <img src={uri}/> 
+            <FileUpload/>                           
+            <img src={uri}/> 
         </div>
     )
 }

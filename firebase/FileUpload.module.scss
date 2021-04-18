@@ -1,0 +1,104 @@
+// <div classname={classes.upload}>
+// <progress className={classes.progress} value={progress} max="100" />
+// <input className={classes.input_image} type="file" onChange={handleChange} />
+// <button className={classes.button}  onClick={handleUpload}>Upload</button>
+// {url}
+// <input className={classes.input_text} ref={inputRef} type="text" />
+// <img className={classes.image}  src={url || "http://via.placeholder.com/300"} alt="firebase-image" />
+// </div>
+
+@import "../styles/constants.scss";
+
+.upload{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    justify-items: space-between;
+    background-color: white;
+    border-radius:20px;
+    padding:5%;
+
+    .image{
+        width:300px;
+        object-fit:cover;
+        border:1px solid black;
+    }
+    @media #{$mobile} {
+        flex-direction:column;
+    }
+    
+
+}
+
+.data{
+    display:flex;
+    flex-direction:column;
+    margin:0 1rem;
+
+    align-items: center;
+    align-content: center;
+}
+
+
+
+
+.inputContainer{
+    display:flex;
+    flex-direction:column;
+    justify-items: space-between;
+    align-items: center;
+    align-content: center;
+    margin:1rem 0 ;
+    .code{
+        font-family:$font1;
+        font-weight: 700;
+        font-size:1.5rem;
+        @media #{$mobile} {
+            font-size:0.9rem;
+        }
+    }
+   .input_text{
+       height:100%;
+       margin:0 0.5rem;
+       height:1.5rem;
+   }
+}
+
+.input_image{
+    margin:2rem 0;
+    width:80%;
+    font-size:0.8rem;
+}
+
+.button{
+    background-color: $violet;
+    text-decoration:none;
+    border-radius:50px;
+    border:none;
+    font-family: $font1;
+    color:white;
+    padding:0.5rem;
+    width:70%;
+    @media #{$mobile} {
+        color:white;
+    }
+}
+.progress{
+    width: 70%;
+    height: 22px;
+    margin:0.5rem;
+}
+
+.progress::-webkit-progress-bar {
+    background-color: rgb(186, 186, 186);
+    border-radius: 500px;
+  }
+.progress::-webkit-progress-value {
+    background-color:rgb(63, 63, 63);
+    border-radius: 500px;
+  }
+
+  .message{
+      font-size:1rem;
+      color:grey;
+  }

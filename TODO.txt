@@ -35,7 +35,7 @@ TODO NACHO
 ---------------------------------------------------------------------
 ✅ Terminar Header achicar logo
 🌗 Implementar boton wp
-🌑 darle estilo a admin
+✅ darle estilo a admin
 🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
 🌑 Agregar filtro en homePage
 ✅ google storage para subir imagenes

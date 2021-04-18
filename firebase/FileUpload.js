@@ -1,5 +1,7 @@
+import classNames from 'classnames';
 import React, {useState, useRef, useEffect} from 'react';
 import { storage, getFirestore } from "./index.js";
+import classes from './FileUpload.module.scss'
 
 
 const FileUpload = () => {
@@ -7,6 +9,7 @@ const FileUpload = () => {
     const [image, setImage] = useState(null);
     const [url, setUrl] = useState("");
     const [progress, setProgress] = useState(0);
+    const [fileState, setFileState]=useState()
   
     const handleChange = e => {
       if (e.target.files[0]) {
@@ -35,10 +38,8 @@ const FileUpload = () => {
             .getDownloadURL()
             .then(url => {
               setUrl(url);
-
-              let purchase = {
-                url: url
-            }
+              setFileState("Archivo Cargado correctamente!")
+              let purchase = { url: url}
               getFirestore().collection("gangadeco").doc(""+inputRef.current.value).set(purchase)
             });
 
@@ -49,13 +50,24 @@ const FileUpload = () => {
     console.log("image: ", image);
   
     return (
-      <div>
-        <progress value={progress} max="100" />
-        <input type="file" onChange={handleChange} />
-        <button onClick={handleUpload}>Upload</button>
-        {url}
-        <input ref={inputRef} type="text" />
-        <img src={url || "http://via.placeholder.com/300"} alt="firebase-image" />
+      <div className={classes.upload}>
+        <img className={classes.image}  src={url || "http://via.placeholder.com/300"} alt="firebase-image" />
+        <div className={classes.data}>
+            <div className={classes.inputContainer}>
+                <h1 className={classes.code}>Codigo de Producto</h1>
+                <input className={classes.input_text} ref={inputRef} type="text" />
+            </div>
+           
+            <input className={classes.input_image} type="file" onChange={handleChange} />
+            
+            <button className={classes.button}  onClick={handleUpload}>Upload</button>
+            
+            <progress className={classes.progress} value={progress} max="100"/>
+            <h2 className={classes.message}>{fileState}</h2>
+
+        </div>
+       
+        
       </div>
     );
   };
