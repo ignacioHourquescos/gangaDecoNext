@@ -4,9 +4,9 @@ A DEFINIR con UX Team
 ---------------------------------------------------------------------
 ❓ Definir secciones de menu. Cual es el punto de la seccion ganga
 ❓ IDea de poner las gangas como carrousel en la home page??
-❓ IDea de hacer un carrito de compra y que se dispare a Wpp
+🌗 IDea de hacer un carrito de compra y que se dispare a Wpp
 ❓ Definir el tema del descuento, como mostrar la ganga? darle un poco mas de onda
-❓ Fomrulario???
+🌗 Fomrulario???
 🌑 Imagen de fondo en svg le falta el tono gris
 
 
@@ -27,7 +27,10 @@ TODO NICO
 🌖 Quienes Somos - completar segun FIGMA
     - un poco menos de left y rigth padding en responsive
 🌑 HAcer el header alternar entre navbar y burgermenu
-🌑 Agregar Head
+🌑 Agregar componente HEad de Next
+🌑 estilos de carrito
+
+
 
 
 
@@ -36,6 +39,7 @@ TODO NACHO
 ✅ Terminar Header achicar logo
 🌗 Implementar boton wp
 ✅ darle estilo a admin
+🌗 Agregar Cart
 🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
 🌑 Agregar filtro en homePage
 ✅ google storage para subir imagenes
