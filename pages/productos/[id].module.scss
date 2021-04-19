@@ -1,37 +1,48 @@
 @import "../../styles/constants.scss";
 
 .container {
+    margin-left: 5%;
+    margin-right: 5%;
+   
     * {
         box-sizing: border-box;
     }
 
-    
-    margin-left: 5%;
-    margin-right: 5%;
-
     .imgContainer {
         width: 100%;
+        padding-top: 100%;
+        position: relative;
+        img{
+                width: 100%;
+                height: auto;
 
-        background: gold; 
+                height: 100%;
+                object-fit: contain;
+                object-position: center center;
+                position: absolute;
+                top: 0; left: 0; bottom: 0; right: 0;
+                
+        }
     }
-    .imgContainer:before {
-        content: '';
-        display: block;
-        padding-top: 100%; /*para una relación 1:1*/
-    }
 
-    img {
-
-        object-fit: scale-down;
-        width:100%;
-        border-radius:8px;   
-
-  
-       position: absolute;
-       top: 0; left: 0; bottom: 0; right: 0;
+              //  object-fit: contain;
+                //border-radius:8px;   
+            //     margin: auto;
+        
+            //    position: absolute;
+            //    top: 0; left: 0; bottom: 0; right: 0;
 
 
-    }
+          
+
+
+    // .imgContainer:before {
+    //     content: '';
+    //     display: block;
+    //     padding-top: 100%; /*para una relación 1:1*/
+    // }
+
+    
 
     .card {
         background-color: initial !important;

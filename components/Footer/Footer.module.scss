@@ -6,6 +6,7 @@
 .footerMain{
     padding-left: 10% !important;
     padding-right: 10% !important;
+    padding-bottom: 80px;
     background-color: $violet;
 
     .logoFooter {
@@ -17,18 +18,22 @@
     }
     .iconChicoFooter {
         width: 33px;
+        margin-right: 15px;
     }
     .tituloFooter {
         font-family: $font1;
         font-weight: 600;
         font-size: 16px;
         color: $white;
+        margin-bottom: 32px;
+
     }
     li {
         font-family: $font1;
         font-weight: 400;
         font-size: 16px;
         color: $white;
+        margin-bottom: 21px !important;
     }
     ul, li{
         margin:0;
