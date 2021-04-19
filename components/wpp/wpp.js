@@ -22,7 +22,7 @@ const ReactWhatsapp = ({ number, message, name, adress, element, onClick, ...pro
 
   return (
       <div className={classes.button2}  {...props} onClick={(e) => {window.open(url); if (onClick) {onClick(e);}}}>
-        wpp
+        <img src="./whatsapp.png" width={"50%"} height={"50%"}/>
         </div>
   );
 };

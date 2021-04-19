@@ -10,6 +10,7 @@ export const AppWrapper = ({ children }) => {
 
     const [cart, setCart] = useState([]);
     const [order, setOrder] = useState([{id:0}]);
+    const [user, setUser] =useState({name:""});
 
     const handleCart = (units, newItem) => {
         const existing = cart.find((article) => article.id === newItem.id);
@@ -26,6 +27,11 @@ export const AppWrapper = ({ children }) => {
         setOrder(array);
     }
 
+    const handleUserData = (data) => {
+        setUser(data);
+    }
+
+
 
 
     return (
@@ -33,8 +39,10 @@ export const AppWrapper = ({ children }) => {
             {
                 cart,
                 order,
+                user,
                 handleCart,
-                generateOrder
+                generateOrder,
+                handleUserData
 
             }}>
             {children}</AppContext.Provider>)

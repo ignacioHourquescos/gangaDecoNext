@@ -4,9 +4,9 @@ import useAppContext from '../../context/AppContext';
 import Checkout from '../Checkout/checkout'
 
 const Cart = () => {
-    const {order, generateOrder} =useAppContext();
+    const {order, generateOrder, cart, user, handleUserData} =useAppContext();
     const [cartIsVisible, setCartIsVisible]=useState(false);
-    const nameRef = useRef();
+    const nameRef = useRef("nombre");
 
     const toogleCartHandler = () =>{
         setCartIsVisible((prevState)=>{setCartIsVisible(!prevState.cartIsVisible)})
@@ -20,6 +20,8 @@ const Cart = () => {
 
 
 
+    
+
 
     return(<>
         <div className={classes.icon} onClick={toogleCartHandler}>
@@ -30,24 +32,26 @@ const Cart = () => {
             ?
             <div className={classes.cart_container}>
                 <div className={classes.close} onClick={closeMenu}>X</div>
-                <h1 >Carrtio</h1>
+                <h1 >Mi pedido</h1>
                 <ul>
-                    <li>1 x Bowl plastico</li>
-                    <li>2 x Termo</li>
+                {cart.map(product=><li key={product.id}>{product.quantity} x {product.desc}</li>)}
+          
                 </ul>
-                <h1 >nombre</h1>
-                <input rtype="text" placeholder={"Nombre"}></input>
-
                 
-                {
-                    nameRef 
+                {/* <input type="text" placeholder={"Nombre"} ref={nameRef}></input> */}
+                {/* {
+                   nameRef==null
                     ?
                     <button>
-                    <Checkout number="5411 65106333" message={"hello "} name="Fulano" />
+                    <Checkout number="5411 65106333" message={"hello "} name={""}/>
                     </button>
                     :
                     ""
-                }
+                } */}
+
+                <button>
+                    <Checkout number="5411 65106333" message={"hello "} name={""}/>
+                </button>
         
             </div>
             :

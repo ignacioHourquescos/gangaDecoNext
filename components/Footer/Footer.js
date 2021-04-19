@@ -6,11 +6,12 @@ import classNames from 'classnames'
 const Footer= () =>{
     const footerMain = classNames(classes.footerMain,"container-fluid")
     const tituloFooter = classNames(classes.tituloFooter,"d-inline")
-    return(
-    <div>
-        <head>
+    return(<>
+              <Head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossOrigin="anonymous"/>
-        </head>
+        </Head> 
+    <div>
+  
             <div className='d-none d-md-block'>
                 <div className={classes.footer_svg}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display: "block"}}>
@@ -53,6 +54,7 @@ const Footer= () =>{
             </div>
     
     </div>
+    </>
         )
 }
 

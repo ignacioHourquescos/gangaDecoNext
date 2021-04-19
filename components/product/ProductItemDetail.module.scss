@@ -24,6 +24,7 @@
         padding: 0;
         width: 100%;
         position:relative;
+        object-fit:cover;
         text-align: center;
         background-color: white;
         border-radius: 15px 15px 0 0;
@@ -32,8 +33,10 @@
         box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
 
         .image{
-            width:100%;
-            max-height:240px;
+            // width:100%;
+            // object-fit:contain;
+            max-height:100%;
+            max-width:100%;
             padding: 0;
             margin:0;
             object-fit: cover;
@@ -43,15 +46,24 @@
 
         .special_offer{
             position: absolute;
-            top: 0;
-            right: 0;
-            border-radius: 0 0 0 200px;
-            width: 25%;
-            height: 25%;
-            background-color: #f1d42daf;
+            top: 0.3rem;
+            right: 0.3rem;
+            border:2px solid white;
+            border-radius: 200px;
+            width:3.3rem;
+            height: 3.3rem;
+            background-color: #A2E8B9;
+            display:flex;
+            align-content:center;
+            align-items:center;
+            justify-items: center;
+            justify-content: center;
             z-index: 10;
+            -webkit-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
+            -moz-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
+            box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
   
-            border-radius: 0px 15px 0 100px;
+      
 
             @keyframes shake {
                 0% { transform: skewX(-15deg); }
@@ -69,14 +81,24 @@
             flex-direction:column;
             align-content:center;
             align-items:center;
-            width: 100%;
             height: 100%;
+            padding: 0;
+            width: 100%;
             font-size:0.8rem;
             font-family: $font1;
             z-index: 10;
             color:white;
             background-color:rgba(0, 0, 0, 0.37);
-            border-radius: 15px 15px 0 0;
+            border-radius: 15px 15px 0 0;    
+            justify-content:center;
+            justify-items: center;
+
+            h3{
+                font-family: $font1;
+                font-size:2rem;
+                font-weight:bold;
+                color:white;
+            }
         }
     }
     
@@ -129,4 +151,10 @@
 
 
 
-
+.loader{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 100%;
+    justify-items: center;
+}

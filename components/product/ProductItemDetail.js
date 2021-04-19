@@ -5,7 +5,9 @@ import React, {useEffect, useState} from 'react';
 import styles from './ProductItemDetail.module.scss'
 import {getImagesFromFirestore, getSingleProductFromDatabase} from '../../backend/Sheets'
 import Loader from '../UI/Loader'
-
+import 'antd/dist/antd.css';
+import { Spin } from 'antd';
+import classNames from 'classnames';
 
 const ProductItemDetail = ({product}) =>{
 
@@ -30,25 +32,30 @@ const ProductItemDetail = ({product}) =>{
 
     return(
     <div  key={product.id} className={styles.product_container} onClick={() => {goToProductHandler(product.id)}}>
+            
                 <div className={styles.image_container}>
                     {
                             product.stock==="no"
                         ? 
                             <div className={styles.sold_out}>
-                                <h3>😢</h3>
-                                <h3>Sin stock</h3>
+                                <h3>Agotado</h3>
                             </div>
                         :
-                                product.ganga==="si"
+                                product.ganga!=""
                             ?
-                                <div className={styles.special_offer}>⚡</div>
+                                <div className={styles.special_offer}>{product.ganga}</div>
                             :
-                           ''        
+                        ''        
                     }
+
+
                     {
                         loading2
                         ?
-                        <Loader/>
+                        <div className={styles.loader}>
+                        <Spin/>
+                        </div>
+                        
                         :
                         <img className={styles.image} alt={product.title} src={image} /> 
 
