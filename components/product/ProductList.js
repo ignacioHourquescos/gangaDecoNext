@@ -5,6 +5,7 @@ import {useEffect, useState} from 'react';
 import Loader from '../UI/Loader.js'
 import {getProducts} from '../../backend/Sheets';
 import useAppContext from '../../context/AppContext';
+import Button from '../UI/Button';
 
 export default function ProductList (props) {
     const { cart } = useAppContext();
@@ -38,7 +39,11 @@ export default function ProductList (props) {
 
         <div className={styles.product_list}>
              {loading ? <Loader /> : <ProductItem className={styles.list} products={products} loading={loading} />} 
+             <div style={{paddingTop:"4rem"}}>
+             <Button link="/comoOCmprar"> ver mas productos</Button>
+             </div>
         </div>
+        
         </>
     )
 }
