@@ -5,10 +5,20 @@
     width: 64%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
+    @media #{$mobile} {
+        width: 80%;
+        margin-top: 80px;
+
+       
+    }
     
     section + section {
         margin-top: 100px;
         
+        @media #{$mobile} {
+            margin-top: 71px;
+        }
     }
 
     img {
@@ -17,6 +27,11 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: .25rem;
+
+        @media #{$mobile} {
+            width: 92px;
+           
+        }
     }
 
     img + p {
@@ -28,9 +43,25 @@
         letter-spacing: 0.1em;
         color: $grey;
         margin-bottom: 80px;
+
+        @media #{$mobile} {
+            margin-bottom: 39px;
+           
+        }
     }
 
     h1 {
+        font-family: $font1;
+        color: $violet;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 23px;
+        letter-spacing: -0.015em;  
+        text-align: center;
+        margin-bottom: 71px;
+    }
+
+    h2 {
         margin-bottom: 1rem;
 
         text-align: left;
@@ -41,6 +72,13 @@
         letter-spacing: 0.1em;
         color: black;
         margin-bottom: 1.5rem;
+
+        @media #{$mobile} {
+            font-size: 14px;
+            line-height: 20px;
+           
+        }
+
     }
 
     p, li {
@@ -52,6 +90,12 @@
         letter-spacing: 0.1em;
         color: black;
         margin-bottom: 1.5rem;
+
+        @media #{$mobile} {
+            font-size: 14px;
+            line-height: 20px;
+           
+        }
     }
 }
 

@@ -17,16 +17,17 @@ function EventDetailPage() {
   useEffect(()=>{
       setLoading(true)
       getProductsById(eventId)
-      .then((result) => { setProduct(result)})
+      .then((result) => {setProduct(result)})
       .then(() => setLoading(false))
     
 
   },[eventId])
 
-  const card = classNames(classes.card,"card col-4 border-0 px-0")
+  const card = classNames(classes.card,"card col-md-4 border-0 px-0")
   const cardTitle = classNames(classes.cardTitle,"card-title")
   const cardLink = classNames(classes.cardLink,"card-link d-inline-block mb-3")
  
+
   return (
     <>
     
@@ -41,15 +42,28 @@ function EventDetailPage() {
         :<div className={classes.container}>
             <div className='container-fluid'></div>
             <div className='row'>
-                <div className='col-2 pl-0 pr-4 d-flex flex-column justify-content-star align-items-end'>
-                    <img src={product.image} className="ml-auto mb-2 w-75"/>
-                    <img src={product.image} className="ml-auto mb-2 w-75"/>
-                    <img src={product.image} className="ml-auto mb-2 w-75"/>
+                <div className='col-md-2 pl-0 pr-4 d-flex flex-column justify-content-star align-items-end'>
+                    <div className="ml-auto mb-2 w-75">
+                        <div className={classes.imgContainer}>
+                            <img src={product.image} className={classes.img}/>                            
+                        </div>
+                    </div>
+                    <div className="ml-auto mb-2 w-75">
+                        <div className={classes.imgContainer}>
+                            <img src={product.image} className={classes.img}/>                            
+                        </div>
+                    </div>
+                    <div className="ml-auto mb-2 w-75">
+                        <div className={classes.imgContainer}>
+                            <img src={product.image} className={classes.img}/>                            
+                        </div>
+                    </div>
                 </div>
 
-                <div className='col-6 pl-0 pr-4'>
-                    <div className={classes.imgContainer}></div>
-                    <img src={product.image} className='img'/>
+                <div className='col-md-6 pl-0 pr-4'>
+                    <div className={classes.imgContainer}>
+                        <img src={product.image} className={classes.img}/>
+                    </div>
                 </div>
 
                 <div className={card}>

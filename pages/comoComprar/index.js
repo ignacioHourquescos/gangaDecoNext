@@ -4,10 +4,11 @@ const comoComprar = () => {
 
     return (
         <div className={classes.container}>
+            <h1 className="d-md-none">Cómo comprar</h1>
             <section>
                 <img src="pedidosIcon.svg"/>
                 <p>PEDIDO</p>
-                <h1>¿Como puedo realizar un pedido?</h1>
+                <h2>¿Como puedo realizar un pedido?</h2>
                 <p>Elegí el producto que quieras comprar. <br/>
                    Una vez elegido el producto, anotate el codigo de cada producto.
                 <p>
@@ -19,14 +20,14 @@ const comoComprar = () => {
             <section>
                 <img src="mediosPagoIcon.svg"/>
                 <p>MEDIOS DE PAGO</p>
-                <h1>¿Cuáles son los medios de pago?</h1>
+                <h2>¿Cuáles son los medios de pago?</h2>
                 <p>Podes abonar con Efectivo, Mercado de Pago y transferencia bancaria.</p>
             </section>
 
             <section>
                 <img src="formasEnvioIcon.svg"/>
                 <p>FORMAS DE ENVIO</p>
-                <h1>¿Realizan envíos?</h1>
+                <h2>¿Realizan envíos?</h2>
                 <p>Si, hacemos envíos, pero varian los    precios según los lugares, a continuación pasamos los precios según las distancias.</p>
                 <ul>
                     <li>$100 Villa de Mayo, Adolfo Sordeaux, Don Torcuato, Los Polvorines, Pablo Nogués.</li>
