@@ -6,18 +6,25 @@ const useAppContext = () => useContext(AppContext)
 
 
 export const AppWrapper = ({ children }) => {
-    const [cart, setCart] = useState(["bananas","manznana"])
 
-    const handleCartArray = (units, newItem) => {
-        const existing = cartArray.find((article) => article.id === newItem.id);
+
+    const [cart, setCart] = useState([]);
+    const [order, setOrder] = useState([{id:0}]);
+
+    const handleCart = (units, newItem) => {
+        const existing = cart.find((article) => article.id === newItem.id);
         if (existing) {
             existing.quantity = existing.quantity + units;
-            setCartArray([...cartArray]);
+            setCart([...cart]);
         }
-        else setCartArray([...cartArray, { "id": newItem.ids}]);
+        else setCart([...cart, { "id": newItem.id, "quantity":1, "desc":newItem.desc, "price":newItem.price}]);
     }
 
 
+    const generateOrder = (array) => {
+        console.log(array);
+        setOrder(array);
+    }
 
 
 
@@ -25,7 +32,9 @@ export const AppWrapper = ({ children }) => {
         <AppContext.Provider value={
             {
                 cart,
-                handleCartArray
+                order,
+                handleCart,
+                generateOrder
 
             }}>
             {children}</AppContext.Provider>)

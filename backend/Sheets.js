@@ -42,7 +42,6 @@ import { getFirestore } from "../firebase/index.js";
 
 
 const ObjectConstructor = (data) => {
-<<<<<<< HEAD
    let products ={}
    let array = [];
   
@@ -95,27 +94,6 @@ export function getImagesFromFirestore() {
            resolve(data)
        })
    })
-=======
-    let products ={}
-    let array = [];
-   
-    for (var i = 0; i < data.length; i++) {
-        array.push({
-            "categoria":        data[i].gsx$categoria.$t,
-            "id":               data[i].gsx$codigo.$t,
-            "title":            data[i].gsx$producto.$t,
-            "stock":            data[i].gsx$stock.$t,
-            "desc":             data[i].gsx$descripcion.$t,
-            "precio":           data[i].gsx$precio.$t,
-            "imagen":           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYz1_BYbpLxZ5UhjB1J50QDuINxUPPawqoqg&usqp=CAU",
-            "ganga":            data[i].gsx$ganga.$t
-            // "dias": convertirFecha(data[i].gsx$fecha.$t)
-        })
-        if (i === data.length - 1) {
-            return (array)
-        }
-    }
->>>>>>> main
 }
 
 
@@ -151,7 +129,7 @@ const ObjectConstructor2 = (data, productId) => {
            "title":            data[i].gsx$producto.$t,
            "stock":            data[i].gsx$stock.$t,
            "desc":             data[i].gsx$descripcion.$t,
-           // "price":           data[i].gsx$precio.$t,
+           "price":           data[i].gsx$precio.$t,
            "image":           data[i].gsx$link.$t,
            "ganga":            data[i].gsx$ganga.$t
            // "dias": convertirFecha(data[i].gsx$fecha.$t)

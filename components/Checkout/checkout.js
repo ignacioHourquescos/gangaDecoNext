@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classes from './wpp.module.scss'
+import classes from './checkout.module.scss'
 import useAppContext from '../../context/AppContext';
 const URL = 'https://wa.me';
 
-const ReactWhatsapp = ({ number, message, name, adress, element, onClick, ...props }) => {
+const ReactWhatsapp = ({ number,name,message, element, onClick, ...props }) => {
   const Element = element;
     const { handleCart, cart, order} = useAppContext();
 
@@ -12,10 +12,14 @@ const ReactWhatsapp = ({ number, message, name, adress, element, onClick, ...pro
 
   let url = `${URL}/${number}`;
 
-  if (message) {
-    //url += `?text=${encodeURI("Hola soy"+name +"de villa de mayoi %/a Me intersan estos porductos %0a1 x Bowl plastico%02 x termo" )}`;
-    // url += `?text=${encodeURI("Hola soy"+name +"de" + adress + order[0].id)}`;
-    url += `?text=Hola queria mas informacion`;
+    
+  if (cart.length>0) {
+    url += `?text=Hola soy ${name}de villa de mayoi %0a Me intersan estos porductos %0a\
+    ${cart[0].quantity} x ${cart[0].id} x ${cart[0].desc} %0a\
+    ${cart[1].quantity} x ${cart[1].id} x ${cart[1].desc} %0a\
+    ${cart[2].quantity} x ${cart[2].id} x ${cart[2].desc} %0a`;
+    //url += `?text=%0a‎Hello%0aWorld`;
+
 
     
   }
