@@ -1,6 +1,6 @@
 
 import ProductList      from '../components/product/ProductList'
-import Header           from '../components/Header/Header'
+import Head             from '../components/Header/Header'
 import Carrousel        from '../components/Carrousel/Carrousel'
 
 
@@ -12,7 +12,7 @@ const HomePage = () => {
    
 
     return (<>
-
+            
 
             <Carrousel/>
             <ProductList/>

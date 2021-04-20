@@ -22,10 +22,8 @@ TODO NICO
 🌗 Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
     - ajustar a responisve que cambie a felxdirection column
     - ver articulo "botella de PET" rompe la grilla
-🌖 Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
-    - un poco menos de left y rigth padding en responsive
-🌖 Quienes Somos - completar segun FIGMA
-    - un poco menos de left y rigth padding en responsive
+✅ Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
+✅ Quienes Somos - completar segun FIGMA
 🌑 HAcer el header alternar entre navbar y burgermenu
 🌑 Agregar componente HEad de Next
 🌑 estilos de carrito

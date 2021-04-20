@@ -2,6 +2,7 @@
 import {useState, useEffect} from 'react'
 import './ProductCarrousel.module.scss'
 import {getProducts} from '../../backend/Sheets';
+import classes from './ProductCarrousel.module.scss'
 
 
 const ProductsCarrousel = (props) => {
@@ -27,7 +28,23 @@ const ProductsCarrousel = (props) => {
             :
             
             productsCarrousel.map(product =>
-                <h3>{product.title}</h3>    
+
+            //aca para abajo
+                <div className={classes.container}>
+                 
+                 <h3>{product.title}</h3> 
+
+
+                </div>
+                 
+
+
+
+
+
+
+
+
             )
         }
            

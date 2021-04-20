@@ -106,7 +106,7 @@ function ProductDetailPage() {
             </div>
 
 
-            {/* <ProductCarrousel/> */}
+            <ProductCarrousel products/>
 
                       
 {/*                         <div className={classes.detail}>
