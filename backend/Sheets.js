@@ -102,7 +102,6 @@ export function getImagesFromFirestore() {
 ///SPECIFIC PRODUCT
 
 export function getProductsById(productId) {
-
    //aca va el link de arriba a la derecha
    var id="18b2yH4VG9-5m8RmsZffjbjc6V_phSntqtbR6VxdUhjs";
    var sheet="1"
@@ -116,25 +115,55 @@ export function getProductsById(productId) {
    })
 }
 
-
-
-
 const ObjectConstructor2 = (data, productId) => {
-   let array = [];
-  
-   for (var i = 0; i < data.length; i++) {
-       array.push({
-           "categoria":        data[i].gsx$categoria.$t,
-           "id":               data[i].gsx$codigo.$t,
-           "title":            data[i].gsx$producto.$t,
-           "stock":            data[i].gsx$stock.$t,
-           "desc":             data[i].gsx$descripcion.$t,
-           "price":           data[i].gsx$precio.$t,
-           "image":           data[i].gsx$link.$t,
-           "ganga":            data[i].gsx$ganga.$t
-           // "dias": convertirFecha(data[i].gsx$fecha.$t)
-       })
-   }
-   return array.find((data) => data.id===productId);
-}
+    let array = [];
+   
+    for (var i = 0; i < data.length; i++) {
+        array.push({
+            "categoria":        data[i].gsx$categoria.$t,
+            "id":               data[i].gsx$codigo.$t,
+            "title":            data[i].gsx$producto.$t,
+            "stock":            data[i].gsx$stock.$t,
+            "desc":             data[i].gsx$descripcion.$t,
+            "price":           data[i].gsx$precio.$t,
+            "image":           data[i].gsx$link.$t,
+            "ganga":            data[i].gsx$ganga.$t
+            // "dias": convertirFecha(data[i].gsx$fecha.$t)
+        })
+    }
+    return array.find((data) => data.id===productId);
+ }
+ 
+
+
+
+
+//Function get all catgories
+export function getCategories(){
+    var id="18b2yH4VG9-5m8RmsZffjbjc6V_phSntqtbR6VxdUhjs";
+    var sheet="1"
+ 
+    return new Promise((resolve) => {
+        fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
+            .then(response => response.json())
+            .then(data => data.feed.entry)
+            .then(data => ObjectConstructor3(data))
+            .then(data => resolve(data))
+    })
+ }
+
+
+
+ const ObjectConstructor3 = (data) => {
+    let array = [];
+    for (var i = 0; i < data.length; i++) {
+        array.push(data[i].gsx$categoria.$t)
+    }
+    return array;
+ }
+ 
+ 
+
+
+
 

@@ -59,7 +59,7 @@ function ProductDetailPage() {
         :<div className={classes.container}>
             <div className='container-fluid'></div>
             <div className='row'>
-                <div className='col-md-2 pl-0 pr-4 d-flex flex-column justify-content-star align-items-end'>
+                {/* <div className='col-md-2 pl-0 pr-4 d-flex flex-column justify-content-star align-items-end'>
                     <div className="ml-auto mb-2 w-75">
                         <div className={classes.imgContainer}>
                             <img src={product.image} className={classes.img}/>                            
@@ -75,7 +75,7 @@ function ProductDetailPage() {
                             <img src={product.image} className={classes.img}/>                            
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className='col-md-6 pl-0 pr-4'>
                     <div className={classes.imgContainer}>

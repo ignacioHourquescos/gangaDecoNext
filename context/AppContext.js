@@ -32,6 +32,10 @@ export const AppWrapper = ({ children }) => {
     }
 
 
+    //CALULATES TOTAL VALUE OF CART
+    const getTotalCartValue = cart.reduce((acumulator, current) => {
+        return acumulator + current.quantity * current.price;
+    }, 0);
 
 
     return (
@@ -40,8 +44,10 @@ export const AppWrapper = ({ children }) => {
                 cart,
                 order,
                 user,
+                getTotalCartValue,
                 handleCart,
                 generateOrder,
+               
                 handleUserData
 
             }}>

@@ -6,6 +6,7 @@ import Loader from '../UI/Loader.js'
 import {getProducts} from '../../backend/Sheets';
 import useAppContext from '../../context/AppContext';
 import Button from '../UI/Button';
+import classNames from 'classnames';
 
 export default function ProductList (props) {
     const { cart } = useAppContext();
@@ -17,6 +18,7 @@ export default function ProductList (props) {
     
 		getProducts().then((result) => {
             setProducts(result.slice(0,13));
+            console.log(result);
             setLoading(false);
         })
 
@@ -25,8 +27,9 @@ export default function ProductList (props) {
     return (
 
         <>
-
+<h2 className={styles.title}> Producto Destacados</h2>
         <div className={styles.product_list}>
+            
              {loading ? <Loader /> : <ProductItem className={styles.list} products={products} loading={loading} />} 
              <div style={{paddingTop:"4rem"}}>
              <Button link="/comoOCmprar"> ver mas productos</Button>

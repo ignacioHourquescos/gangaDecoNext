@@ -14,20 +14,18 @@ A DEFINIR con UX Team
 
 TODO NICO
 ---------------------------------------------------------------------
-🌗  Footer: Completar la grilla 
+🌑 Footer responsive
+✅  Footer: Completar la grilla 
     - ajustar padding de abajo (los logos tocan el fondo)
     - ajustar margin icosnos telefono mail
     - ajustar grilla responsive. se rompe un poco
     - agregar los links a la lista. (copiar como esta hecho en el archivo header. hay que importar Header de next)
-🌗 Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
+✅ Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
     - ajustar a responisve que cambie a felxdirection column
     - ver articulo "botella de PET" rompe la grilla
 ✅ Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
 ✅ Quienes Somos - completar segun FIGMA
-🌑 HAcer el header alternar entre navbar y burgermenu
-🌑 Agregar componente HEad de Next
-🌑 estilos de carrito
-
+🌑 Responsive de producto
 
 
 
@@ -35,22 +33,24 @@ TODO NICO
 TODO NACHO
 ---------------------------------------------------------------------
 ✅ Terminar Header achicar logo
-🌗 Implementar boton wp
+✅ Implementar boton wp
 ✅ darle estilo a admin
-🌗 Agregar Cart
-🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
-🌑 Agregar filtro en homePage
+✅ Agregar Car
 ✅ google storage para subir imagenes
 ✅  Agregar Image next
+✅  Agregar file de Context
+✅  Agregar carrito de compra
+🌑 temrinar de darle estilo al carrito / que haga fade in
+✅ Agregar filtro en homePage
+🌗 Agrgar categorias en el menu
+🌑 Fomrulario de contacto
+🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
+🌑 Agregar componente HEad de Next
+🌑 estilos de carrito
+🌑 HAcer el header alternar entre navbar y burgermenu
 
 
-
-
-
-------------------------------------------
-🌑 Agregar file de Context
-🌑 Agregar carrito de compra
-
-
-
-
+PRESENTACION PAGINA
+_______________________________
+- la pagina principal agarra los 15 primeros articulos del sheets
+- mostrar /admin para uploader imagenes
