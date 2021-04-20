@@ -45,7 +45,7 @@ const ObjectConstructor = (data) => {
             "stock":            data[i].gsx$stock.$t,
             "desc":             data[i].gsx$descripcion.$t,
             "precio":           data[i].gsx$precio.$t,
-            "imagen":           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYz1_BYbpLxZ5UhjB1J50QDuINxUPPawqoqg&usqp=CAU",
+            "imagen":           data[i].gsx$link.$t,
             "ganga":            data[i].gsx$ganga.$t
             // "dias": convertirFecha(data[i].gsx$fecha.$t)
         })
