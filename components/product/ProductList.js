@@ -10,24 +10,13 @@ import Button from '../UI/Button';
 export default function ProductList (props) {
     const { cart } = useAppContext();
 
-
-	const [cartItems, setCartItems] = useState([]);
-
-	useEffect(() => {
-		setCartItems(cart);
-	}, [])
-
-
-    
     const [products, setProducts] = useState();
     const [loading, setLoading] =useState(true);
     
 	useEffect(() => {
     
 		getProducts().then((result) => {
-
-            //setProducts(result.filter(product => product.stock!="no"));
-            setProducts(result);
+            setProducts(result.slice(0,13));
             setLoading(false);
         })
 
@@ -53,25 +42,26 @@ export default function ProductList (props) {
 
   
 
- var id="18b2yH4VG9-5m8RmsZffjbjc6V_phSntqtbR6VxdUhjs";
- var sheet="1"
 
 
 
-export async function getStaticProps() {
-    // Call an external API endpoint to get posts.
-    // You can use any data fetching library
-    const res = await fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
-    const res2 = await res.json()
-    const data = await res2.feed.entry
-    const array = ObjectConstructor(data)
-    const posts = JSON.stringify(array)
+
+// export async function getStaticProps() {
+//     var id="18b2yH4VG9-5m8RmsZffjbjc6V_phSntqtbR6VxdUhjs";
+//     var sheet="1"
+//     // Call an external API endpoint to get posts.
+//     // You can use any data fetching library
+//     const res = await fetch('https://spreadsheets.google.com/feeds/list/'+id+'/'+sheet+'/public/full?alt=json')
+//     const res2 = await res.json()
+//     const data = await res2.feed.entry
+//     const array = await ObjectConstructor(data)
+//     const posts =  JSON.stringify(array)
   
-     // By returning { props: { posts } }, the Blog component
-     // will receive `posts` as a prop at build time
-     return {
-       props: {
-         posts,
-       },
-     }
-   }
+//      // By returning { props: { posts } }, the Blog component
+//      // will receive `posts` as a prop at build time
+//      return {
+//        props: {
+//          posts:[{id:"hola"},{id:"que tal"}]
+//        },
+//      }
+//    }
