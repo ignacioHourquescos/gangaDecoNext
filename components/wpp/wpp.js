@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'next/Image'
+
 import classes from './wpp.module.scss'
 import useAppContext from '../../context/AppContext';
 const URL = 'https://wa.me';
@@ -23,7 +23,7 @@ const ReactWhatsapp = ({ number, message, name, adress, element, onClick, ...pro
 
   return (
       <div className={classes.button2}  {...props} onClick={(e) => {window.open(url); if (onClick) {onClick(e);}}}>
-        <Image src="/whatsapp.png" width={"40%"} height={"40%"}/>
+        <img src="/whatsapp.png" width={"40%"} height={"40%"}/>
         </div>
   );
 };
