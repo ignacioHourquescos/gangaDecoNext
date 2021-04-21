@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import {getProductsById, getSingleProductFromDatabase }from '../../backend/Sheets'
-
+import Button from '../../components/UI/Button'
 import head from 'next/head'
 import classes from './[id].module.scss'
 import classNames from 'classnames'
@@ -14,13 +14,14 @@ function ProductDetailPage() {
     const [loading, setLoading] = useState(true);
     const [image, setImage] = useState();
     const [loading2, setLoading2] = useState(true);
+    const [bubble, setBubble] = useState(false);
     const [product, setProduct] = useState([]);
     const router = useRouter();
     const eventId = router.query.id;
 
     const addToCartHandler = () =>{
-        handleCart(1,{"id":eventId, "desc":product.title, "price":product.price});
-        console.log(cart);
+        handleCart(1,{"id":eventId, "title":product.title, "price":product.price});
+        setBubble(true);
     }
 
   useEffect(()=>{
@@ -48,6 +49,7 @@ function ProductDetailPage() {
 
   return (
     <>
+        {bubble  ? <div className={classes.bubble}><div className={classes.dot}></div></div> : ""}
             <head>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
         </head>
@@ -100,7 +102,11 @@ function ProductDetailPage() {
                         <p className="card-text">Aca irian los colores</p>
                         <h6 className="card-subtitle">Codigo</h6>
                         <p className="card-text">{product.id}</p>
-                        <button onClick={addToCartHandler}> Comprar</button>
+                        <Button onClick={addToCartHandler}>
+                         Agregar a Carrito
+                        </Button>
+
+
                     </div>
                 </div>
             </div>

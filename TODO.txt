@@ -4,8 +4,8 @@ A DEFINIR con UX Team
 ---------------------------------------------------------------------
 ❓ Definir secciones de menu. Cual es el punto de la seccion ganga
 ❓ IDea de poner las gangas como carrousel en la home page??
-🌗 IDea de hacer un carrito de compra y que se dispare a Wpp
-❓ Definir el tema del descuento, como mostrar la ganga? darle un poco mas de onda
+✅  IDea de hacer un carrito de compra y que se dispare a Wpp
+✅ Definir el tema del descuento, como mostrar la ganga? darle un poco mas de onda
 🌗 Fomrulario???
 🌑 Imagen de fondo en svg le falta el tono gris
 
@@ -15,6 +15,7 @@ A DEFINIR con UX Team
 TODO NICO
 ---------------------------------------------------------------------
 🌑 Footer responsive
+🌑 Responsive de producto
 ✅  Footer: Completar la grilla 
     - ajustar padding de abajo (los logos tocan el fondo)
     - ajustar margin icosnos telefono mail
@@ -25,7 +26,6 @@ TODO NICO
     - ver articulo "botella de PET" rompe la grilla
 ✅ Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
 ✅ Quienes Somos - completar segun FIGMA
-🌑 Responsive de producto
 
 
 
@@ -40,17 +40,18 @@ TODO NACHO
 ✅  Agregar Image next
 ✅  Agregar file de Context
 ✅  Agregar carrito de compra
-🌑 temrinar de darle estilo al carrito / que haga fade in
+✅  estilos de carrito
+✅  HAcer el header alternar entre navbar y burgermenu
 ✅ Agregar filtro en homePage
-🌗 Agrgar categorias en el menu
+✅  Agrgar categorias en el menu
 🌑 Fomrulario de contacto
+🌑 temrinar de darle estilo al carrito / que haga fade in
 🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
 🌑 Agregar componente HEad de Next
-🌑 estilos de carrito
-🌑 HAcer el header alternar entre navbar y burgermenu
+
 
 
 PRESENTACION PAGINA
 _______________________________
-- la pagina principal agarra los 15 primeros articulos del sheets
+- la pagina principal agarra los 12 primeros articulos del sheets
 - mostrar /admin para uploader imagenes

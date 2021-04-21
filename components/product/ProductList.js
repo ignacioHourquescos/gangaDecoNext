@@ -32,7 +32,7 @@ export default function ProductList (props) {
             
              {loading ? <Loader /> : <ProductItem className={styles.list} products={products} loading={loading} />} 
              <div style={{paddingTop:"4rem"}}>
-             <Button link="/comoOCmprar"> ver mas productos</Button>
+             <Button link="/category"> ver mas productos</Button>
              </div>
         </div>
         

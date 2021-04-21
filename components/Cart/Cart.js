@@ -5,10 +5,12 @@ import Checkout from '../Checkout/checkout'
 import Backdrop from '../layout/Backdrop'
 import Button from '../UI/Button'
 
+
 const Cart = () => {
-    const {order, generateOrder, cart, user, handleUserData} =useAppContext();
+    const {cart, getTotalCartValue, eliminateItem} =useAppContext();
     const [cartIsVisible, setCartIsVisible]=useState(false);
     const nameRef = useRef("nombre");
+
 
     const toogleCartHandler = () =>{
         setCartIsVisible((prevState)=>{setCartIsVisible(!prevState.cartIsVisible)})
@@ -23,9 +25,13 @@ const Cart = () => {
 
     return(<>
         <div className={classes.icon} >
-        {/* <div className={classes.icon} onClick={toogleCartHandler}> */}
-            {/* <img src="/carrito.png" className={classes.icon} alt='mail image'/> */}
+            { cart.length>0
+            ?
+            <div className={classes.icon2} onClick={toogleCartHandler}>{cartIcon}</div>
+            :
             <div className={classes.icon} onClick={toogleCartHandler}>{cartIcon}</div>
+            }
+
         </div>
         {
             cartIsVisible
@@ -34,26 +40,23 @@ const Cart = () => {
             <div className={classes.cart_container}>
                 <div className={classes.close} onClick={closeMenu}>{closeIcon}</div>
                 <h1 className={classes.title}>Mi pedido</h1>
-                <ul>
+                
                 {
                     cart.length==0
                     ?
-                    <h3>no tiene productos seleccionados</h3>
+                    <h3 className={classes.placeholder}>no tiene productos seleccionados</h3>
                     :
-                    cart.map(product=><li key={product.id}>{product.quantity} x {product.desc}</li>)
+                    cart.map(p=><div className={classes.item}>
+                    <p className={classes.cart_item} key={p.id}>{p.quantity} X {p.title}</p>
+                    <p>${p.quantity*p.price}</p>
+                    <p className={classes.eliminate} onClick={eliminateItem}>{closeIcon}</p>
+                    </div>)
                 }
-                </ul>
-                
-                {/* <input type="text" placeholder={"Nombre"} ref={nameRef}></input> */}
-                {/* {
-                   nameRef==null
-                    ?
-                    <button>
-                    <Checkout number="5411 65106333" message={"hello "} name={""}/>
-                    </button>
-                    :
-                    ""
-                } */}
+               
+                <div>
+                <hr size="8" width="100%" color="grey"/>  
+                <h3 className={classes.placeholder}>${getTotalCartValue}</h3>
+                </div>
 
                 <Button>
                     <Checkout number="5411 65106333" message={"hello "} name={""}/>
@@ -63,7 +66,7 @@ const Cart = () => {
             <Backdrop click={closeMenu}/>
             </>
             :
-            ""
+            <div className={classes.cart_container_close}/>
         }
     </>)
 }

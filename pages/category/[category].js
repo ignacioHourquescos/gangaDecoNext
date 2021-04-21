@@ -11,10 +11,12 @@ import {getProducts, getCategories} from '../../backend/Sheets';
 
 
 export default function ProductList (props) {
-    const [products, setProducts] = useState();
-    const [categories, setCategories] = useState(["Filtrar"]);
-    const [loading, setLoading] =useState(true);
-    const [selectedCategory, setSelectedCategory] = useState();
+    const [products, setProducts]       = useState([]);
+    const [categories, setCategories]   = useState(["Filtrar"]);
+    const [loading, setLoading]         = useState(true);
+    const [loading2, setLoading2]       = useState(true);
+    const [loading3, setLoading3]       = useState(true);
+
     const router = useRouter();
     var categoryParams = router.query.category;
 
@@ -36,22 +38,21 @@ export default function ProductList (props) {
         })
 	}, []);
 
-    const handleFilter = (e, categoryParams) =>{
-        setSelectedCategory(e.target.value);
-        if(e.target.value == "Categoria"){
-            getProducts().then((result) => {
-                setProducts(result);
-                setLoading(false);
-            })
-        } else{
-            getProducts().then((result) => {
-                setProducts(result.filter(product =>product.categoria==e.target.value));
-                setLoading(false);
-            })
+    let orderedProducts=[];
+
+    const handleFilter = (e) => {
+        if(e.target.value==="asc"){
+        setLoading2(false);
+        setLoading3(true);
+        orderedProducts = products.sort(function(a, b){return a.precio-b.precio});
+        setProducts(orderedProducts); 
+        }else{
+            setLoading3(false);
+            orderedProducts = products.sort(function(a, b){return b.precio-a.precio});
+            setProducts(orderedProducts);
+            setLoading2(true);         
         }
     }
-
-    var options
 
 
     return (
@@ -60,8 +61,11 @@ export default function ProductList (props) {
         
             <h2>Ordernar: </h2>        
             <select className={styles.category} name="cars" form="categories" onChange={handleFilter}>
-            <option value="desc" selected>Mas baratos</option>
-            <option value="asc" selected>Mas caros </option>
+            <option value="" selected>alfabetico</option>
+
+            <option value="asc">Mas baratos</option>
+            <option value="des">Mas caros </option>
+
             </select>
         </div>
 
