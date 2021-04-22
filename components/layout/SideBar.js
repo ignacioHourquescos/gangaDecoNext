@@ -36,10 +36,25 @@ const SideBar = (props) => {
         {
             props.show
             ?
+            
             <nav className={classes.side_drawer_open}>
-            <div className={classes.close} onClick={props.click}>{closeIcon}</div>
+                
+                <div className={classes.close} onClick={props.click}>{closeIcon}</div>
+                
+                {/* <div placeholder=" Buscar por codigo" style={styles.search_box_container}> 
+                    
+                    <input placeholder=" Buscar por codigo" style={styles.search_box}/> 
+                    <span style={styles.search_box_button} onClick={pushProduct}>{arrow}</span>
+
+                </div> */}
+
                 <ul >
-               
+
+                    <div placeholder=" Buscar por codigo" className={classes.search_box_container}> 
+                        <input type="text" ref={codigo} placeholder=" Buscar por codigo" className={classes.search_box}/> 
+                        <span className={classes.search_box_button} onClick={pushProduct}>{arrow}</span>
+                    </div>
+
                    <li onClick={props.click}><Link href="/">              Home</Link></li>
                    <li onClick={props.click}><Link href="/gangas" >       Gangas</Link></li>
                    {categories.map(category=>
@@ -47,17 +62,15 @@ const SideBar = (props) => {
                    <li onClick={props.click}><Link href="/quienesSomos">  Quienes Somos</Link></li>
                    <li onClick={props.click}><Link href="/comoComprar">   Como comprar</Link></li>
                    <li onClick={props.click}><Link href="/Contacto">      Contacto</Link></li>
-              
-                   <div style={{display:"flex", flexDirection:"row"}}>
-                    <input type="text" ref={codigo} className={classes.li} placeholder="Buscar por codigo" style={{border:"none",width:"70%", margin:"5%",padding:"0 2rem"}} name="search"/>
-                    <div className={classes.arrow} onClick={pushProduct}>{arrow}</div>
-                </div>
-               </ul> 
-           </nav>
-            :
-            <nav className={classes.side_drawer} onClick={props.click}>
+                   {/* <div style={{display:"flex", flexDirection:"row"}}> 
+                        <input type="text"  className={classes.li} placeholder="Buscar por codigo" name="search"/>
+                        <div className={classes.arrow} onClick={pushProduct}>{arrow}</div>
+                    </div> */}
+                </ul>
 
             </nav>
+            :
+            <nav className={classes.side_drawer} onClick={props.click}/>
         }
 </>
     )
@@ -71,7 +84,39 @@ const closeIcon=
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 
-const arrow=
-<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+
+const arrow =
+<svg xmlns="http://www.w3.org/2000/svg" padding="0" margin="0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M14 5l7 7m0 0l-7 7m7-7H3" />
 </svg>
+
+// const styles ={
+
+//     search_box_container:{
+//         border:"1px solid grey",
+//         backgroundColor:"white",
+//         opacity:"0.8",
+//         padding:'0',
+//         marginTop:"1rem",
+//         display:"flex"
+//     },
+//     search_box:{
+//         border:"none",
+//         height:"100%",
+//         width:"80%",
+//         borderRadius: "5px",
+//         padding:"0 1rem",
+//         color: "grey";
+//                 fontSize: "1.5rem";
+//                 fontFamily: $font1;
+//     },
+//     search_box_button:{
+//         width:"35px",
+//         height:"100%",
+//         margin:"0",
+//         padding:"0",
+//         borderRadius: "5px",
+//         border:"none",
+//         backgroundColor:"none"
+//     }
+// }

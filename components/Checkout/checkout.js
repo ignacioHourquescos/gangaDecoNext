@@ -5,15 +5,15 @@ const URL = 'https://wa.me';
 
 const ReactWhatsapp = ({ number,name,message, element, onClick, ...props }) => {
   
-    const { handleCart, cart, order} = useAppContext();
+    const { handleCart, cart, order,getTotalCartValue} = useAppContext();
 
     number = number.replace(/[^\w\s]/gi, '').replace(/ /g, '');
 
     let url = `${URL}/${number}`;
-    let pedido = cart.reduce(function(a, b) {return a + ["", ""][+!!a.length] + b.quantity+" x ("+ b.id + ") " + b.desc +"%0a";}, "");
+    let pedido = cart.reduce(function(a, b) {return a + ["", ""][+!!a.length] + b.quantity+" x ("+ b.id + ") " + b.title +"%0a";}, "");
 
      if (cart.length>0) {
-         url += `?text=Hola!  %0aTe escribo porque me interesan estos prodcutos! %0a${pedido}` 
+         url += `?text=Hola!  %0aTe escribo porque me interesan estos productos! %0a${pedido}_____________________%0aTotal:$${getTotalCartValue}` 
      }
 
     return (

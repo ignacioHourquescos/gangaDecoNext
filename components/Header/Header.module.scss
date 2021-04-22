@@ -14,6 +14,7 @@
     align-items:center;
     align-content:center;
     z-index:2000;
+    padding-top:1rem;
 
     @media #{$mobile} {
         height:25vh;
@@ -27,8 +28,9 @@
 }
 
 .image{
-    width:15vh;
-    height:15vh;
+    width:9rem;
+    height:9rem;
+    margin-top:1.5rem;
     -webkit-box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
     -moz-box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
     box-shadow: 10px 10px 14px -10px rgba(130,23,130,1);
@@ -52,7 +54,8 @@
     font-weight: 700;
     font-size:1.2rem;
     margin:0 2rem ;
-   
+    display:none;
+
     color:#6C6C6C;
     @media #{$mobile} {
         display:none;

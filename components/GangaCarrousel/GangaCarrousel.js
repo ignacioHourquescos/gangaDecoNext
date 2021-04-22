@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react"
-import classes                      from './ProductCarrousel.module.scss'
+import classes                      from './GangaCarrousel.module.scss'
 import {getProducts}                from '../../backend/Sheets'
-import ProductCarrouselItem         from './ProductCarrouselItem'
+import GangaItem                    from '../GangaItem/GangaItem'
 import Carousel                     from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 
-const ProductCarrousel = (props) =>{
+const GangaCarrousel = (props) =>{
     const [products, setProducts] = useState([]);
     const [loading, setLoading] =useState(true);
     
@@ -56,7 +56,7 @@ const ProductCarrousel = (props) =>{
             className={classes.container} 
             responsive={responsive}>
                  
-                    {products.map(ganga =><ProductCarrouselItem  
+                    {products.map(ganga =><GangaItem  
            
                         product={ganga} 
                         index={ganga.index} 
@@ -72,7 +72,8 @@ const ProductCarrousel = (props) =>{
    </>);
 }
   
-export default ProductCarrousel; 
+export default GangaCarrousel; 
+
 
 const colors = ["#5EBEFB","#FA73B7","#46EBCC"]
 
@@ -104,14 +105,16 @@ const svg =[
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 4
+          items: 3
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 4
+          items: 2
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 2
+          items: 1
         }
       };
+
+    

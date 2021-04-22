@@ -1,10 +1,12 @@
 
 @import "../../styles/constants.scss";
 
+
+
 .side_drawer_open{    
     background-color: rgb(238, 238, 238);
     height:100%;
-    padding-top:3rem;
+    padding-top:14rem;
     margin:0;
     position:fixed;
     top:0;
@@ -15,8 +17,13 @@
     transform: translateX(0);
     transition: transform 0.3s;
     padding-top:1rem;
-    overflow-y: hidden;
-    
+    overflow-y: scroll;
+    /* width */
+    @media #{$desktop} {
+        width:90%;
+        max-width:380px;
+    }
+
 
     .close{
         position:absolute;
@@ -50,7 +57,7 @@
             font-size: 1.2rem;
             font-family: $font1;
             text-decoration:none;
-            padding:0.8rem 1rem;
+            padding:0.6rem 1rem;
             margin:0;
 
             .li:hover,
@@ -80,7 +87,7 @@
         }
 
         li{    cursor: pointer;
-            padding: 0.8rem 0;
+            padding: 0.6rem 0;
             border-bottom:1px solid grey;
             
 
@@ -136,4 +143,58 @@
     height:3rem;
     z-index:3000;
     cursor: pointer;
+}
+
+
+.side_drawer_open::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  .side_drawer_open::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+   
+  }
+   
+  /* Handle */
+  .side_drawaer_open::-webkit-scrollbar-thumb {
+    background: rgb(73, 73, 73); 
+   
+  }
+  
+  /* Handle on hover */
+  .side_drawer_open::-webkit-scrollbar-thumb:hover {
+    background: #444444; 
+  }
+
+
+.search_box_container{
+    border-top:1px solid grey;
+    border-bottom:1px solid grey;
+    background-color:white;
+    opacity:0.8;
+    padding:'0';
+    margin-top:1rem;
+    display:flex;
+    @media #{$desktop} {
+        display:none;
+    }
+}
+.search_box{
+    border:none;
+    height:100%;
+    width:80%;
+    border-radius: 5px;
+    padding:0 1rem;
+    color: grey;
+            font-size: 1rem;
+            font-family: $font1;
+}
+.search_box_button{
+    width:35px;
+    height:100%;
+    margin:0;
+    padding:0;
+    border-radius: 5px;
+    border:none;
+    background-color:none;
 }
