@@ -12,7 +12,7 @@ const Footer= () =>{
         </Head> 
     <div>
   
-            <div className='d-none d-md-block'>
+            <div>
                 <div className={classes.footer_svg}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style={{display: "block"}}>
                         <path className={classes.svg0} fillOpacity={svg[0].opacity} d={svg[0].svg}/>
@@ -20,9 +20,9 @@ const Footer= () =>{
                 </div>
                 <div className={footerMain}>
                     <div className='row justify-content-between'>
-                        <div className='col text-center justify-content-center'> 
+                        <div className='col-12 col-md text-center justify-content-center mb-5 mb-md-0'> 
                             <row>
-                                <div className='col-12 mb-3'>
+                                <div className='col-12 mb-md-3'>
                                     <img src="/logo2.png" className={classes.logoFooter} alt="logo ganga deco"/>
                                 </div>
                             </row>
@@ -30,8 +30,8 @@ const Footer= () =>{
                                 <img src="/facebook.png" className={classes.iconGrandeFooter} alt="facebook image"/>
                         </div>
                         
-                        <div className='col text-center'>
-                            <ul className='d-inline-flex flex-column d-inline align-items-start'>
+                        <div className='col-12 col-md text-center mb-3 mb-md-0'>
+                            <ul className='d-inline-flex flex-column d-inline align-items-md-start'>
                                 <h5 className={tituloFooter}>Navegación</h5>
                                 <li className='d-inline-block'>Home</li>
                                 <li className='d-inline'>Nosotros</li>
@@ -42,8 +42,8 @@ const Footer= () =>{
                             </ul>
                         </div>
                         
-                        <div className='col text-center'>               
-                            <ul className='d-inline-flex flex-column d-inline align-items-start'>
+                        <div className='col-12 col-md text-center'>               
+                            <ul className='d-inline-flex flex-column d-inline align-items-md-start'>
                                 <h5 className={tituloFooter}>Contactanos</h5>    
                                 <li><img src="/whatsapp.png" className={classes.iconChicoFooter} alt='wathsapp image'/>11-3588-4485</li>
                                 <li><img src="/mail.png" className={classes.iconChicoFooter} alt='mail image'/>mail@mail.com</li>

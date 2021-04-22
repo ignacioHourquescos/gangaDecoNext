@@ -15,6 +15,11 @@
     .iconGrandeFooter {
         width: 50px;
         margin: 33px 12px 0px 12px;
+        
+        @media #{$mobile} {
+            margin-top: 17px;
+           
+        }
     }
     .iconChicoFooter {
         width: 33px;
