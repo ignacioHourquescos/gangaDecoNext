@@ -5,7 +5,7 @@ import classNames from 'classnames'
 
 const Footer= () =>{
     const footerMain = classNames(classes.footerMain,"container-fluid")
-    const tituloFooter = classNames(classes.tituloFooter,"d-inline")
+    const tituloFooter = classNames(classes.tituloFooter,"d-none d-md-inline")
     return(<>
               <Head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossOrigin="anonymous"/>
@@ -30,7 +30,7 @@ const Footer= () =>{
                                 <img src="/facebook.png" className={classes.iconGrandeFooter} alt="facebook image"/>
                         </div>
                         
-                        <div className='col-12 col-md text-center mb-3 mb-md-0'>
+                        <div className='col-12 col-md text-center mb-3 mb-md-0 d-none d-md-block'>
                             <ul className='d-inline-flex flex-column d-inline align-items-md-start'>
                                 <h5 className={tituloFooter}>Navegación</h5>
                                 <li className='d-inline-block'>Home</li>
