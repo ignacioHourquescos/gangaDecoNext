@@ -84,21 +84,13 @@
     }
 }
 .progress{
-    width: 70%;
-    height: 22px;
-    margin:0.5rem;
+
+    margin:1rem !important;
 }
 
-.progress::-webkit-progress-bar {
-    background-color: rgb(186, 186, 186);
-    border-radius: 500px;
-  }
-.progress::-webkit-progress-value {
-    background-color:rgb(63, 63, 63);
-    border-radius: 500px;
-  }
 
   .message{
+    margin:0.5rem;
       font-size:1rem;
       color:grey;
   }

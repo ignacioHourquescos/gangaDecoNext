@@ -3,6 +3,9 @@ import React, {useState, useRef, useEffect} from 'react';
 import { storage, getFirestore } from "./index.js";
 import classes from './FileUpload.module.scss'
 
+import 'antd/dist/antd.css';
+import { Progress } from 'antd';
+
 
 const FileUpload = () => {
     const inputRef = useRef();
@@ -62,7 +65,8 @@ const FileUpload = () => {
             
             <button className={classes.button}  onClick={handleUpload}>Upload</button>
             
-            <progress className={classes.progress} value={progress} max="100"/>
+            {/* <progress className={classes.progress} value={progress} max="100"/> */}
+            <Progress className={classes.progress} type="circle" percent={progress} width={80} strokeColor={"violet"}/>
             <h2 className={classes.message}>{fileState}</h2>
 
         </div>

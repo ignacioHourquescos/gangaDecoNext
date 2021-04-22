@@ -10,6 +10,19 @@ A DEFINIR con UX Team
 🌑 Imagen de fondo en svg le falta el tono gris
 
 
+MODIFICACIONES
+---------------------------------------------------------------------
+- cambiar forma de comprar
+- ver logo de ganga
+- hace rmenu srcoleable
+- contact cartel
+- agrega boton de comprar en home a cada producto
+- color dropdown
+- logos footer mas chicos
+- poner 3 iconos 
+
+https://www.sevenmarkettt.com.ar/productos/acolchado-alaska-precio-lanzamiento/
+https://www.wildsouls.gr/en
 
 
 TODO NICO

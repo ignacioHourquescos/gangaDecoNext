@@ -6,6 +6,7 @@ import styles from './ProductItemDetail.module.scss'
 import {getImagesFromFirestore, getSingleProductFromDatabase} from '../../backend/Sheets'
 import Loader from '../UI/Loader'
 import 'antd/dist/antd.css';
+import Image from 'next/image';
 import { Spin } from 'antd';
 import classNames from 'classnames';
 
@@ -28,6 +29,8 @@ const ProductItemDetail = ({product}) =>{
     })
         }
             )
+
+            
         
 
     return(
@@ -57,7 +60,7 @@ const ProductItemDetail = ({product}) =>{
                         </div>
                         
                         :
-                        <img className={styles.image} alt={product.title} src={image} /> 
+                        <Image className={styles.image} alt={product.title} priority={false} src={image} width={300} height={300} layout="fixed"/> 
 
                     }
                        
