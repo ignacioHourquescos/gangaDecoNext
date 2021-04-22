@@ -56,7 +56,8 @@ const GangaCarrousel = (props) =>{
             className={classes.container} 
             responsive={responsive}>
                  
-                    {products.map(ganga =><GangaItem 
+                    {products.map(ganga =><GangaItem  
+           
                         product={ganga} 
                         index={ganga.index} 
                         svg={svg[ganga.svg]} 
