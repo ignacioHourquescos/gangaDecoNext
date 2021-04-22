@@ -1,14 +1,18 @@
 
-import ProductList  from '../components/product/ProductList'
-import Header       from '../components/Header/Header'
-import Carrousel    from '../components/Carrousel/Carrousel'
+import ProductList      from '../components/product/ProductList'
+import Head             from '../components/Header/Header'
+import Carrousel        from '../components/Carrousel/Carrousel'
+
 
 
 
 const HomePage = () => {
 
-    return (<>
 
+   
+
+    return (<>
+            
 
             <Carrousel/>
             <ProductList/>

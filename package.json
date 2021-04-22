@@ -8,13 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@google-cloud/storage": "^5.8.3",
     "antd": "^4.15.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "classnames": "^2.3.1",
     "csshake": "^1.5.3",
-    "next": "^10.0.6",
+    "firebase": "^8.4.1",
+    "next": "10.0.6",
     "node-fs": "^0.1.7",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-burger-menu": "^3.0.6",

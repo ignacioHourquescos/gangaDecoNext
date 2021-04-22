@@ -4,16 +4,26 @@ import styles from './ProductList.module.scss'
 import {useEffect, useState} from 'react';
 import Loader from '../UI/Loader.js'
 import {getProducts} from '../../backend/Sheets';
-
+import useAppContext from '../../context/AppContext';
+import Button from '../UI/Button';
 
 export default function ProductList (props) {
-    console.log(props.products);
+    const { cart } = useAppContext();
 
 
+	const [cartItems, setCartItems] = useState([]);
+
+	useEffect(() => {
+		setCartItems(cart);
+	}, [])
+
+
+    
     const [products, setProducts] = useState();
     const [loading, setLoading] =useState(true);
     
 	useEffect(() => {
+    
 		getProducts().then((result) => {
 
             //setProducts(result.filter(product => product.stock!="no"));
@@ -26,11 +36,14 @@ export default function ProductList (props) {
     return (
 
         <>
-        
 
         <div className={styles.product_list}>
              {loading ? <Loader /> : <ProductItem className={styles.list} products={products} loading={loading} />} 
+             <div style={{paddingTop:"4rem"}}>
+             <Button link="/comoOCmprar"> ver mas productos</Button>
+             </div>
         </div>
+        
         </>
     )
 }
@@ -46,7 +59,5 @@ export default function ProductList (props) {
            }
   
 }
-  
-
   
 

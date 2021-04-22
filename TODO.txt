@@ -4,9 +4,9 @@ A DEFINIR con UX Team
 ---------------------------------------------------------------------
 ❓ Definir secciones de menu. Cual es el punto de la seccion ganga
 ❓ IDea de poner las gangas como carrousel en la home page??
-❓ IDea de hacer un carrito de compra y que se dispare a Wpp
+🌗 IDea de hacer un carrito de compra y que se dispare a Wpp
 ❓ Definir el tema del descuento, como mostrar la ganga? darle un poco mas de onda
-❓ Fomrulario???
+🌗 Fomrulario???
 🌑 Imagen de fondo en svg le falta el tono gris
 
 
@@ -14,23 +14,36 @@ A DEFINIR con UX Team
 
 TODO NICO
 ---------------------------------------------------------------------
-🌑 Footer: Completar la grilla 
-🌑 Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
-🌑 Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
-🌑 Quienes Somos - completar segun FIGMA
+🌗  Footer: Completar la grilla 
+    - ajustar padding de abajo (los logos tocan el fondo)
+    - ajustar margin icosnos telefono mail
+    - ajustar grilla responsive. se rompe un poco
+    - agregar los links a la lista. (copiar como esta hecho en el archivo header. hay que importar Header de next)
+🌗 Product  - Terminar de dar los estilos a la ficha de producto segun Figma 
+    - ajustar a responisve que cambie a felxdirection column
+    - ver articulo "botella de PET" rompe la grilla
+✅ Como comprar - completar segun FIGMA (los iconos estan en la carpeta en formato svg)
+✅ Quienes Somos - completar segun FIGMA
+🌑 HAcer el header alternar entre navbar y burgermenu
+🌑 Agregar componente HEad de Next
+🌑 estilos de carrito
+
+
 
 
 
 TODO NACHO
 ---------------------------------------------------------------------
-🌗 Terminar Header achicar logo
-🌗 Implementar boton wpp
-🌑 HAcer el header alternar entre navbar y burgermenu
+✅ Terminar Header achicar logo
+🌗 Implementar boton wp
+✅ darle estilo a admin
+🌗 Agregar Cart
+🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
 🌑 Agregar filtro en homePage
-🌑 google storage para subir imagenes
-🌑 implementar getstaticprops de Next 
+✅ google storage para subir imagenes
 ✅  Agregar Image next
-🌑 Agregar Head
+
+
 
 
 

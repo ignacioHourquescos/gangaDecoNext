@@ -1,12 +1,12 @@
-
+import React from "react"
 import './Loader.module.scss'
 
 
-const MyLoader = (props) => (
+const Loader = (props) => (
       <>
-            <div className="loader"></div>
+            <div className="loader">loading</div>
       </>
 )
 
-export default MyLoader
+export default Loader
 
