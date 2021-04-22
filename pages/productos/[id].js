@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import {getProductsById }from '../../backend/Sheets'
 import Carrousel from "../../components/Carrousel/Carrousel"
 import {getProductsById, getSingleProductFromDatabase }from '../../backend/Sheets'
-
+import Button from '../../components/UI/Button'
 import head from 'next/head'
 import classes from './[id].module.scss'
 import classNames from 'classnames'
@@ -16,13 +16,14 @@ function ProductDetailPage() {
     const [loading, setLoading] = useState(true);
     const [image, setImage] = useState();
     const [loading2, setLoading2] = useState(true);
+    const [bubble, setBubble] = useState(false);
     const [product, setProduct] = useState([]);
     const router = useRouter();
     const eventId = router.query.id;
 
     const addToCartHandler = () =>{
-        handleCart(1,{"id":eventId, "desc":product.title, "price":product.price});
-        console.log(cart);
+        handleCart(1,{"id":eventId, "title":product.title, "price":product.price});
+        setBubble(true);
     }
 
   useEffect(()=>{
@@ -52,6 +53,7 @@ function ProductDetailPage() {
 
   return (
     <>
+        {bubble  ? <div className={classes.bubble}><div className={classes.dot}></div></div> : ""}
             <head>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
         </head>
@@ -63,9 +65,13 @@ function ProductDetailPage() {
         :<div className={classes.container}>
         <div className='container-fluid'>
             <div className='row'>
+<<<<<<< HEAD
 
                 {/* capturas pequeñas */}
                 <div className='d-none d-md-block col-md-2 pl-0 pr-4 d-md-flex flex-column justify-content-star align-items-end'>
+=======
+                {/* <div className='col-md-2 pl-0 pr-4 d-flex flex-column justify-content-star align-items-end'>
+>>>>>>> 932a58dd9dbc0820b25013b996a05d8a6bc1accf
                     <div className="ml-auto mb-2 w-75">
                         <div className={classes.imgContainer}>
                             <img src={product.image} className={classes.img}/>                            
@@ -81,7 +87,7 @@ function ProductDetailPage() {
                             <img src={product.image} className={classes.img}/>                            
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
               <Carrousel/>
@@ -114,7 +120,11 @@ function ProductDetailPage() {
                         <p className="card-text">Aca irian los colores</p>
                         <h6 className="card-subtitle">Codigo</h6>
                         <p className="card-text">{product.id}</p>
-                        <button onClick={addToCartHandler}> Comprar</button>
+                        <Button onClick={addToCartHandler}>
+                         Agregar a Carrito
+                        </Button>
+
+
                     </div>
                 </div>
             </div>

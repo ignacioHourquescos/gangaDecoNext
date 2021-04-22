@@ -18,23 +18,18 @@ function Layout(props) {
         setSideDrawerOpen(false);
     }
 
-
-  return (
+    return (
     <>
-      <BurgerMenu drawerToggleClickHandler={drawerToggleClickHandler} />
-      <SideBar click={closeMenu} show={sideDrawerOpen}/> 
-      { 
-          sideDrawerOpen 
-      ?  
-        <> 
-            <Backdrop click={closeMenu}/> 
-           
-        </> 
-      :
+        <BurgerMenu drawerToggleClickHandler={drawerToggleClickHandler} />
+        <SideBar click={closeMenu} show={sideDrawerOpen}/> 
+        { 
+            sideDrawerOpen 
+        ?  
+            <Backdrop click={closeMenu}/>  
+        :
         ''
-    }
-    
-      <main>{props.children}</main>
+        }
+        <main>{props.children}</main>
     </>
   );
 }

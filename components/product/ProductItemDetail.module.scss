@@ -12,6 +12,7 @@
     justify-items: flex-start;
     align-items:center;
     align-content:center;
+    cursor:pointer;
 
      @media #{$mobile} {
          width: 40%;
@@ -31,10 +32,14 @@
         -webkit-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
         -moz-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
         box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
+        transition: transform .5s;
+        overflow: hidden;
+        :hover{
+            transform: scale(1.05);
+        }
 
         .image{
-            // width:100%;
-            // object-fit:contain;
+
             max-height:100%;
             max-width:100%;
             padding: 0;
@@ -42,27 +47,34 @@
             object-fit: cover;
             border-radius: 15px 15px 0 0;
             text-align:center;
+           transition: transform .9s;
         }
 
         .special_offer{
             position: absolute;
             top: 0.3rem;
             right: 0.3rem;
-            border:2px solid white;
+            // border:2px solid white;
             border-radius: 200px;
             width:3.3rem;
             height: 3.3rem;
-            background-color: #A2E8B9;
+            font-family:$font1;
+            font-weight: bold;
+            background-color: #a2e8b9;
             display:flex;
             align-content:center;
             align-items:center;
             justify-items: center;
             justify-content: center;
             z-index: 10;
-            -webkit-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
-            -moz-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
-            box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
-  
+            // -webkit-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
+            // -moz-box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
+            // box-shadow: 3px 4px 5px 0px rgba(214,206,214,1);
+            @media #{$mobile} {
+                width: 2.5rem;
+                height:2.5rem;
+            }
+       
       
 
             @keyframes shake {
@@ -101,8 +113,6 @@
             }
         }
     }
-    
-
 
     .data_container{
         z-index:1;
@@ -121,7 +131,7 @@
 
         .title{
             background-color:white;
-            font-size:1rem;
+            font-size:1.2rem;
              color: $orange;
              font-weight: 800;
              font: $font1;
@@ -147,9 +157,6 @@
         }
     }
 }
-
-
-
 
 .loader{
     display:flex;

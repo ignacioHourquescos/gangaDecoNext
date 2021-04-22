@@ -18,7 +18,7 @@ export const AppWrapper = ({ children }) => {
             existing.quantity = existing.quantity + units;
             setCart([...cart]);
         }
-        else setCart([...cart, { "id": newItem.id, "quantity":1, "desc":newItem.desc, "price":newItem.price}]);
+        else setCart([...cart, { "id": newItem.id, "quantity":1, "title":newItem.title, "price":newItem.price}]);
     }
 
 
@@ -32,6 +32,19 @@ export const AppWrapper = ({ children }) => {
     }
 
 
+    //CALULATES TOTAL VALUE OF CART
+    const getTotalCartValue = cart.reduce((acumulator, current) => {
+        return acumulator + current.quantity * current.price;
+    }, 0);
+
+
+    //ELIMINATE AN EXISTING ITEM OF THE CART
+    const eliminateItem = (item) => {
+        let index = cart.findIndex(element => element.id === item.id);
+        cart.splice(index, 1);
+        setCart([...cart]);
+    }
+
 
 
     return (
@@ -40,8 +53,11 @@ export const AppWrapper = ({ children }) => {
                 cart,
                 order,
                 user,
+                getTotalCartValue,
                 handleCart,
                 generateOrder,
+                eliminateItem,
+               
                 handleUserData
 
             }}>

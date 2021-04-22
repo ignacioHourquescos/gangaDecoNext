@@ -2,67 +2,20 @@
 
 .toolbar {
     position:fixed;
-    width:100%;
+    padding: 1rem;
     background-color: transparent;
     top:0;
     left:0;
     height:56px;
-
-    .toolbar_navigation{
-        height:100%;
-        display:flex;
-        align-items:center;
-        padding: 1rem;
-
-        .toolbar_logo a{
-            color:white;
-            text-decoration:none;
-            background-color: red;
-        }
-
-        .spacer{
-            flex:1;
-        }
-        
-        .toolbar_navigation_items {
-            
-            ul{
-                list-style:none;
-                margin:0;
-                padding:0;
-                display:flex;
-
-                li{
-                    padding: 0 0.5rem;
-
-                    a {
-                        color:white;
-                        text-decoration:none;
-                    }
-                    
-                    a:hover{
-                        color:red;
-                        text-decoration:none;
-                    }
-                        
-                    a:active{
-                        color:orange;
-                        text-decoration:none;
-                    }
-                }
-            }
-        
-            
-	    @media #{$mobile} {
-		    display:none;
-	    }
-
-
-
-        }
-
-
-    }
+    z-index:1000;
+           
+	// @media #{$desktop} {
+	//     display:none;
+	// }
 }
+
+
+    
+
 
 

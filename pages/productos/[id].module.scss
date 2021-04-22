@@ -147,3 +147,60 @@ box-shadow: 10px 11px 6px -6px rgba(209,209,209,1);
 }
 
  */
+
+
+ 
+
+.bubble {
+    position: fixed;
+    right: 0rem;
+    top: 0rem;
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    background-color: $orange;
+    -moz-border-radius: 0 0 0 1000px;
+    -webkit-border-radius: 0 0 0 1000px;
+    border-radius: 0 0 0 1000px;
+    -moz-animation-name: ripple;
+    -webkit-animation-name: ripple;
+    animation-name: ripple;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+  
+  @keyframes ripple {
+    from {opacity: 1;}
+    30%  { opacity:0.6}
+    50%  { opacity: 0.4;}    
+    70%  { opacity: 0.1;}
+    to   { width: 300px;
+           height: 300px;
+           opacity: 0;
+         }
+  }
+  
+  @keyframes ripple-2 {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    100% {
+      width: 200px;
+      height: 100px;
+      border-width: 1px;
+      top: 100px;
+      left: 200px;
+    }
+  }
+  

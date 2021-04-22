@@ -64,7 +64,7 @@ const ProductItemDetail = ({product}) =>{
                 </div>
                 <div className={styles.data_container}>
                     <h3 className={styles.title}>{product.title}</h3>
-                    <h4 className={styles.price}>{product.precio}</h4>
+                    <h4 className={styles.price}>${product.precio}</h4>
                     <h5 className={styles.id}>Codigo: {product.id}</h5>
                 </div>
             </div>
