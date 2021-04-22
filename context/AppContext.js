@@ -18,7 +18,7 @@ export const AppWrapper = ({ children }) => {
             existing.quantity = existing.quantity + units;
             setCart([...cart]);
         }
-        else setCart([...cart, { "id": newItem.id, "quantity":1, "title":newItem.title, "price":newItem.price}]);
+        else setCart([...cart, { "id": newItem.id, "quantity":units, "title":newItem.title, "price":newItem.price}]);
     }
 
 
@@ -46,6 +46,14 @@ export const AppWrapper = ({ children }) => {
     }
 
 
+        //CALCULATES NUMBER OF UNITS OF A CERTAIN PRODUCT
+        const ItemQuantity = (item) => {
+            let aux = 0;
+            aux = cart.find(element => element.id === item.id);
+            if (!aux) return 0;
+            return aux.quantity;
+        }
+
 
     return (
         <AppContext.Provider value={
@@ -57,6 +65,7 @@ export const AppWrapper = ({ children }) => {
                 handleCart,
                 generateOrder,
                 eliminateItem,
+                ItemQuantity,
                
                 handleUserData
 

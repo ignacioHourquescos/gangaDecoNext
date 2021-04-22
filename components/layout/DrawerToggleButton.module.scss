@@ -23,6 +23,10 @@
         padding:0;
         margin-left:2rem;
         display:flex;
+        @media #{$mobile} {
+            display:none;
+        }
+   
     }
     .search_box2{
  

@@ -9,7 +9,7 @@ import Button from '../UI/Button'
 const Cart = () => {
     const {cart, getTotalCartValue, eliminateItem} =useAppContext();
     const [cartIsVisible, setCartIsVisible]=useState(false);
-    const nameRef = useRef("nombre");
+    const nameRef = useRef();
 
 
     const toogleCartHandler = () =>{

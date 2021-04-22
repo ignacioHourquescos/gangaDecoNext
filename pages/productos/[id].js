@@ -10,36 +10,64 @@ import useAppContext from '../../context/AppContext';
 
 function ProductDetailPage() {
 
-    const { handleCart, cart, order} = useAppContext();
+    const { handleCart, cart, order, ItemQuantity } = useAppContext();
     const [loading, setLoading] = useState(true);
     const [image, setImage] = useState();
+    const [image2, setImage2] = useState();
     const [loading2, setLoading2] = useState(true);
     const [bubble, setBubble] = useState(false);
     const [product, setProduct] = useState([]);
+    const [itemCount, setItemCount] = useState(0);
+    const [currentItemQuantity, setCurrentItemQuantity] = useState();
+    const [units, setUnits] = useState();
     const router = useRouter();
     const eventId = router.query.id;
 
+    //DATA FECTHING
+
+    useEffect(()=>{
+        getSingleProductFromDatabase(eventId)
+        .then(data=>{
+            setImage(data);
+            setLoading2(false);
+    })},[eventId])
+
+
+    useEffect(()=>{
+        getSingleProductFromDatabase(eventId+".amarillo")
+        .then(data=>{
+            setImage2(data);
+            setLoading2(false);
+    })},[eventId])
+
+
+
+    useEffect(()=>{
+        getProductsById(eventId)
+        .then((result) => {setProduct(result)})
+        .then(() => setLoading(false))
+    },[eventId])
+    
+    //ADD TO CART HANDLER
     const addToCartHandler = () =>{
-        handleCart(1,{"id":eventId, "title":product.title, "price":product.price});
+        handleCart(units,{"id":eventId, "title":product.title, "price":product.price});
         setBubble(true);
     }
 
-  useEffect(()=>{
-    //   setLoading(true)
-      getProductsById(eventId)
-      .then((result) => {setProduct(result)})
-      .then(() => setLoading(false))
+    const restarUnidad = (itemCount) => {
+        if (itemCount > 0) setItemCount(itemCount - 1)
+    }
+
+    const sumarUnidad = (itemCount) => {
+        if (itemCount < product.stock) setItemCount(itemCount + 1);
+    }
 
 
-  },[eventId])
-
-  useEffect(()=>{
-    getSingleProductFromDatabase(eventId)
-    .then(data=>{
-        setImage(data);
-        setLoading2(false);
-    })
-    },[eventId])
+  useEffect(() => {
+    setItemCount(itemCount);
+    setCurrentItemQuantity(ItemQuantity(product));
+    setUnits(itemCount)
+}, [itemCount, cart,ItemQuantity,product]);
 
 
   const card = classNames(classes.card,"card col-md-4 border-0 px-0")
@@ -56,29 +84,12 @@ function ProductDetailPage() {
 
     {   
 
+
         loading
         ?<h1>Loading....</h1>
         :<div className={classes.container}>
             <div className='container-fluid'></div>
             <div className='row'>
-                {/* <div className='col-md-2 pl-0 pr-4 d-flex flex-column justify-content-star align-items-end'>
-                    <div className="ml-auto mb-2 w-75">
-                        <div className={classes.imgContainer}>
-                            <img src={product.image} className={classes.img}/>                            
-                        </div>
-                    </div>
-                    <div className="ml-auto mb-2 w-75">
-                        <div className={classes.imgContainer}>
-                            <img src={product.image} className={classes.img}/>                            
-                        </div>
-                    </div>
-                    <div className="ml-auto mb-2 w-75">
-                        <div className={classes.imgContainer}>
-                            <img src={product.image} className={classes.img}/>                            
-                        </div>
-                    </div>
-                </div> */}
-
                 <div className='col-md-6 pl-0 pr-4'>
                     <div className={classes.imgContainer}>
                         {
@@ -102,7 +113,16 @@ function ProductDetailPage() {
                         <p className="card-text">                           Aca irian los colores       </p>
                         <h6 className="card-subtitle">                      Codigo                      </h6>
                         <p className="card-text">                           {product.id}                </p>
-                        <Button onClick={addToCartHandler}>
+                        
+
+
+                        <div className="add_to_cart_ItemCount">
+                            <button onClick={() => { restarUnidad(itemCount) }}>-</button>
+                            <span>{itemCount}</span>
+                            <button onClick={() => { sumarUnidad(itemCount) }}>+</button>   
+                        </div>
+              
+                        <Button onClick={()=>{addToCartHandler()}}>
                          Agregar a Carrito
                         </Button>
 
@@ -112,7 +132,7 @@ function ProductDetailPage() {
             </div>
 
 
-            <ProductCarrousel products/>
+
 
                       
 {/*                         <div className={classes.detail}>
@@ -130,7 +150,10 @@ function ProductDetailPage() {
 
         </div>
        
+        
     }
+
+    <ProductCarrousel product={eventId}/> 
       
     </>
   );

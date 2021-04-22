@@ -1,17 +1,44 @@
-.carrousel{
-    display:flex;
-    flex-direction:row;
 
+
+@import "../../styles/constants.scss";
+
+.container_main{
+    width:100%;
+    background: linear-gradient(rgba(238, 223, 190, 0.418), #ffffff00);
+    height:80vh;
+    padding:0 10%;
+    transform:translateY(-120px);
     
-    white-space: nowrap;
+    @media #{$mobile} {
+        padding:0%;
+        height:70vh;
+        transform:translateY(-20px);
+    }
 }
+
+.svg{
+    transform:translateY(-120px);
+    @media #{$mobile} {
+        padding:0%;
+        transform:translateY(-20px);
+    }
+}
+
 
 .container{
-    background-color: yellow;
-    width:100px;
-    height:300px;
-    margin:1rem;
-    display:flex;
-    flex-direction:column;
-    
+    width:100%;
+    //background-color: rgba(238, 223, 190, 0.418);
+    //background: linear-gradient(rgba(238, 223, 190, 0.418), #ffffff00);
+
+   padding:0 5% ;
+   height:100%;
+
+   @media #{$mobile} {
+    padding:0%;
+    height:100%;
 }
+
+}
+
+
+

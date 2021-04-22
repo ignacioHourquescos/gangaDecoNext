@@ -14,12 +14,13 @@ MODIFICACIONES
 ---------------------------------------------------------------------
 - cambiar forma de comprar
 ✅ ver logo de ganga
-- hace rmenu srcoleable
+✅  hace rmenu srcoleable
 - contact cartel
-- agrega boton de comprar en home a cada producto
-- color dropdown
-- logos footer mas chicos
+✅  agrega boton de comprar en home a cada producto
+❌ color dropdown
+✅ logos footer mas chicos
 - poner 3 iconos 
+- terminar product id de fondo en svg le falta el tono gris
 
 https://www.sevenmarkettt.com.ar/productos/acolchado-alaska-precio-lanzamiento/
 https://www.wildsouls.gr/en
@@ -58,7 +59,7 @@ TODO NACHO
 ✅ Agregar filtro en homePage
 ✅  Agrgar categorias en el menu
 🌑 Fomrulario de contacto
-🌑 temrinar de darle estilo al carrito / que haga fade in
+✅ temrinar de darle estilo al carrito / que haga fade in
 🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
 🌑 Agregar componente HEad de Next
 
@@ -66,5 +67,15 @@ TODO NACHO
 
 PRESENTACION PAGINA
 _______________________________
+- hacemos recorrido de la pagina
+    - mostra decsunteos
+    - carrito de compras a wpp
 - la pagina principal agarra los 12 primeros articulos del sheets
+- sheets
 - mostrar /admin para uploader imagenes
+- fin    
+
+
+
+ELLAS
+pasar una foto para quienes Somos
