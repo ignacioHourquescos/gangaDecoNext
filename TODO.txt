@@ -13,7 +13,7 @@ A DEFINIR con UX Team
 MODIFICACIONES
 ---------------------------------------------------------------------
 - cambiar forma de comprar
-- ver logo de ganga
+✅ ver logo de ganga
 - hace rmenu srcoleable
 - contact cartel
 - agrega boton de comprar en home a cada producto

@@ -126,7 +126,7 @@ const ObjectConstructor2 = (data, productId) => {
             "stock":            data[i].gsx$stock.$t,
             "desc":             data[i].gsx$descripcion.$t,
             "price":           data[i].gsx$precio.$t,
-            "image":           data[i].gsx$link.$t,
+            // "image":           data[i].gsx$link.$t,
             "ganga":            data[i].gsx$ganga.$t
             // "dias": convertirFecha(data[i].gsx$fecha.$t)
         })

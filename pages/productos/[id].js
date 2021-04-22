@@ -25,7 +25,7 @@ function ProductDetailPage() {
     }
 
   useEffect(()=>{
-      setLoading(true)
+    //   setLoading(true)
       getProductsById(eventId)
       .then((result) => {setProduct(result)})
       .then(() => setLoading(false))
@@ -34,12 +34,12 @@ function ProductDetailPage() {
   },[eventId])
 
   useEffect(()=>{
-    getSingleProductFromDatabase(eventId.toString())
+    getSingleProductFromDatabase(eventId)
     .then(data=>{
         setImage(data);
         setLoading2(false);
     })
-    },[])
+    },[eventId])
 
 
   const card = classNames(classes.card,"card col-md-4 border-0 px-0")
@@ -93,15 +93,15 @@ function ProductDetailPage() {
 
                 <div className={card}>
                     <div className="card-body px-0">
-                        <h5 className={cardTitle}>{product.title}</h5>
-                        <h5 className="card-subtitle text-muted mb-1">{product.price}</h5>
-                        <a href="#" className={cardLink}>Ver los medios de pago</a>
-                        <h6 className="card-subtitle">Descripcion</h6>
-                        <p className="card-text">{product.desc}</p>
-                        <h6 className="card-subtitle">Colores</h6>
-                        <p className="card-text">Aca irian los colores</p>
-                        <h6 className="card-subtitle">Codigo</h6>
-                        <p className="card-text">{product.id}</p>
+                        <h5 className={cardTitle}>                          {product.title}             </h5>
+                        <h5 className="card-subtitle text-muted mb-1">      {product.price}             </h5>
+                        <a href="#" className={cardLink}>                   Ver los medios de pago      </a>
+                        <h6 className="card-subtitle">                      Descripcion                 </h6>
+                        <p className="card-text">                           {product.desc}              </p>
+                        <h6 className="card-subtitle">                      Colores                     </h6>
+                        <p className="card-text">                           Aca irian los colores       </p>
+                        <h6 className="card-subtitle">                      Codigo                      </h6>
+                        <p className="card-text">                           {product.id}                </p>
                         <Button onClick={addToCartHandler}>
                          Agregar a Carrito
                         </Button>
