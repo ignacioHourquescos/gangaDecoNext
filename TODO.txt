@@ -2,36 +2,32 @@
 
 A DEFINIR con UX Team
 ---------------------------------------------------------------------
-❓ Definir secciones de menu. Cual es el punto de la seccion ganga
-❓ IDea de poner las gangas como carrousel en la home page??
+✅  Definir secciones de menu. Cual es el punto de la seccion ganga
+✅IDea de poner las gangas como carrousel en la home page??
 ✅  IDea de hacer un carrito de compra y que se dispare a Wpp
 ✅ Definir el tema del descuento, como mostrar la ganga? darle un poco mas de onda
 🌗 Fomrulario???
-🌑 Imagen de fondo en svg le falta el tono gris
+
 
 
 MODIFICACIONES
 ---------------------------------------------------------------------
-- cambiar forma de comprar
 ✅ ver logo de ganga
 ✅  hace rmenu srcoleable
-- contact cartel
 ✅  agrega boton de comprar en home a cada producto
-❌ color dropdown
 ✅ logos footer mas chicos
+- contact cartel
 - poner 3 iconos 
-- terminar product id de fondo en svg le falta el tono gris
+🌑 Imagen de fondo en svg le falta el tono gris
+🌑  cambiar forma de comprar
 
-https://www.sevenmarkettt.com.ar/productos/acolchado-alaska-precio-lanzamiento/
-https://www.wildsouls.gr/en
+
 
 
 TODO NICO
 ---------------------------------------------------------------------
-🌑 Footer responsive
-🌑 Responsive de producto
-✅  Footer: Completar la grilla 
-    - ajustar padding de abajo (los logos tocan el fondo)
+✅ Footer responsive
+✅  Footer: Completar la grilla - ajustar padding de abajo (los logos tocan el fondo)
     - ajustar margin icosnos telefono mail
     - ajustar grilla responsive. se rompe un poco
     - agregar los links a la lista. (copiar como esta hecho en el archivo header. hay que importar Header de next)
@@ -47,23 +43,25 @@ TODO NICO
 TODO NACHO
 ---------------------------------------------------------------------
 ✅ Terminar Header achicar logo
+✅ Responsive de producto
 ✅ Implementar boton wp
 ✅ darle estilo a admin
 ✅ Agregar Car
 ✅ google storage para subir imagenes
-✅  Agregar Image next
-✅  Agregar file de Context
-✅  Agregar carrito de compra
-✅  estilos de carrito
-✅  HAcer el header alternar entre navbar y burgermenu
+✅ Agregar Image next
+✅ Agregar file de Context
+✅ Agregar carrito de compra
+✅ estilos de carrito
+✅ HAcer el header alternar entre navbar y burgermenu
 ✅ Agregar filtro en homePage
-✅  Agrgar categorias en el menu
-🌑 Fomrulario de contacto
+✅ Agrgar categorias en el menu
 ✅ temrinar de darle estilo al carrito / que haga fade in
+🌑 Fomrulario de contacto
 🌑 implementar getstaticprops de Next home por lo menos las imagenes desde ProdcutItem Detial
 🌑 Agregar componente HEad de Next
 
-
+https://www.sevenmarkettt.com.ar/productos/acolchado-alaska-precio-lanzamiento/
+https://www.wildsouls.gr/en
 
 PRESENTACION PAGINA
 _______________________________
