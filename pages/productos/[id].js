@@ -1,7 +1,5 @@
 import {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
-import {getProductsById }from '../../backend/Sheets'
-import Carrousel from "../../components/Carrousel/Carrousel"
 import {getProductsById, getSingleProductFromDatabase }from '../../backend/Sheets'
 import Button from '../../components/UI/Button'
 import head from 'next/head'
@@ -75,8 +73,6 @@ function ProductDetailPage() {
   const card = classNames(classes.card,"card col-md-4 border-0 px-0")
   const cardTitle = classNames(classes.cardTitle,"card-title")
   const cardLink = classNames(classes.cardLink,"card-link d-inline-block mb-3")
-
-
  
 
   return (
@@ -92,44 +88,9 @@ function ProductDetailPage() {
         loading
         ?<h1>Loading....</h1>
         :<div className={classes.container}>
-        <div className='container-fluid'>
+            <div className='container-fluid'></div>
             <div className='row'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                {/* capturas pequeñas */}
-                <div className='d-none d-md-block col-md-2 pl-0 pr-4 d-md-flex flex-column justify-content-star align-items-end'>
-=======
-                {/* <div className='col-md-2 pl-0 pr-4 d-flex flex-column justify-content-star align-items-end'>
->>>>>>> 932a58dd9dbc0820b25013b996a05d8a6bc1accf
-                    <div className="ml-auto mb-2 w-75">
-                        <div className={classes.imgContainer}>
-                            <img src={product.image} className={classes.img}/>                            
-                        </div>
-                    </div>
-                    <div className="ml-auto mb-2 w-75">
-                        <div className={classes.imgContainer}>
-                            <img src={product.image} className={classes.img}/>                            
-                        </div>
-                    </div>
-                    <div className="ml-auto mb-2 w-75">
-                        <div className={classes.imgContainer}>
-                            <img src={product.image} className={classes.img}/>                            
-                        </div>
-                    </div>
-                </div> */}
-
-
-              <Carrousel/>
-
-
-
-
-                {/* foto principal version desktop */}
-                <div className='col-md-6 pl-0 pr-4 d-none d-md-block'>
-=======
                 <div className='col-md-6 pl-0 pr-4'>
->>>>>>> 2914f1a9ba0f51f58705560e5d6d70f1c7eb3fd6
                     <div className={classes.imgContainer}>
                         {
                             loading2
@@ -141,7 +102,6 @@ function ProductDetailPage() {
                     </div>
                 </div>
 
-                {/* tarjeta con la info del preducto */}
                 <div className={card}>
                     <div className="card-body px-0">
                         <h5 className={cardTitle}>                          {product.title}             </h5>
@@ -175,16 +135,22 @@ function ProductDetailPage() {
 
 
                       
-            
+{/*                         <div className={classes.detail}>
+                            <h1 classes={classes.title}>    {product.title}</h1>
+                            <h2 classes={classes.price}>    {product.price}</h2>
+                            <h3 classes={classes.payment}>  metodos de pago</h3>
+                            <h2 classes={classes.subtitle}> Descripcion</h2>
+                            <h2 classes={classes.desc}>     {product.desc}</h2>
+                            <h2 classes={classes.subtitle}> Colores</h2>
+                            <h2 classes={classes.colors}>   {product.title}</h2>
+                            <h2 classes={classes.subtitle}> Codigo</h2>
+                            <h2 classes={classes.code}>     {product.id}</h2>
+                        </div>
+ */}            
 
         </div>
-<<<<<<< HEAD
-
-    </div>    
-=======
        
         
->>>>>>> 2914f1a9ba0f51f58705560e5d6d70f1c7eb3fd6
     }
 
     <ProductCarrousel product={eventId}/> 
