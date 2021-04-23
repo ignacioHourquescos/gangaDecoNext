@@ -3,7 +3,7 @@ import classes from './checkout.module.scss'
 import useAppContext from '../../context/AppContext';
 const URL = 'https://wa.me';
 
-const ReactWhatsapp = ({ number,name,message, element, onClick, ...props }) => {
+const ReactWhatsapp = ({ number,name,message, adress, element, onClick, ...props }) => {
   
     const { handleCart, cart, order,getTotalCartValue} = useAppContext();
 
@@ -13,7 +13,7 @@ const ReactWhatsapp = ({ number,name,message, element, onClick, ...props }) => {
     let pedido = cart.reduce(function(a, b) {return a + ["", ""][+!!a.length] + b.quantity+" x ("+ b.id + ") " + b.title +"%0a";}, "");
 
      if (cart.length>0) {
-         url += `?text=Hola!  %0aTe escribo porque me interesan estos productos! %0a${pedido}_____________________%0aTotal:$${getTotalCartValue}` 
+         url += `?text=Hola!  %0aMi nombre es ${name} de ${adress}. Te escribo porque me interesan estos productos! %0a${pedido}_____________________%0aTotal:$${getTotalCartValue}` 
      }
 
     return (

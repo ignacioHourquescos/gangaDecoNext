@@ -113,3 +113,35 @@
     transform:translateX(+100%);
     transition: transform 0.3s;
 }
+
+.input_text{
+    background-color: rgba(255, 255, 255, 0.61);
+    opacity:0.8;
+    display:flex;
+    border:0;
+    border-bottom:1px solid rgba(128, 128, 128, 0.678);
+    padding: 0.3rem 1.4rem;
+    font-size: 1rem;
+    font-style: italic;  
+    margin-bottom:0.3rem;  
+}
+
+.checkout_bottom{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items:center;
+    width:100%;
+    padding:0;
+   
+   
+}
+
+.cart_list{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items:center;
+    justify-content: flex-start;
+    width:100%;  
+}

@@ -11,7 +11,8 @@ import 'antd/dist/antd.css';
 const Cart = () => {
     const {cart, getTotalCartValue, eliminateItem} =useAppContext();
     const [cartIsVisible, setCartIsVisible]=useState(false);
-    const nameRef = useRef();
+    const name = useRef(null);
+    const adress = useRef(null);
 
 
     const toogleCartHandler = () =>{
@@ -23,6 +24,14 @@ const Cart = () => {
     const closeMenu = () =>{
         setCartIsVisible(false);
     }
+
+   
+        const nameForm = useRef(null)
+      
+        const handleClickEvent = () => {
+           const form = nameForm.current
+           alert(`${form['firstname'].value} ${form['lastname'].value}`)
+        }
 
 
     return(<>
@@ -50,11 +59,13 @@ const Cart = () => {
                     ?
                     <h3 className={classes.placeholder}>no tiene productos seleccionados</h3>
                     :
-                    cart.map(p=><div className={classes.item}>
-                    <p className={classes.cart_item} key={p.id}>{p.quantity} X {p.title}</p>
-                    <p>${p.quantity*p.price}</p>
-                    <p className={classes.eliminate} onClick={eliminateItem}>{closeIcon}</p>
-                    </div>)
+                    <div classname={classes.cart_list}>
+                        {cart.map(p=><div className={classes.item}>
+                            <p className={classes.cart_item} key={p.id}>{p.quantity} X {p.title}</p>
+                            <p>${p.quantity*p.price}</p>
+                            <p className={classes.eliminate} onClick={eliminateItem}>{closeIcon}</p>
+                        </div>)}
+                    </div>
                 }
                
                 <div>
@@ -62,9 +73,15 @@ const Cart = () => {
                 <h3 className={classes.placeholder}>${getTotalCartValue}</h3>
                 </div>
 
-                <Button>
-                    <Checkout number="5411 35884485" message={"hello "} name={""}/>
-                </Button>
+                <div className={classes.checkout_bottom}>
+
+                
+                    <input type="text" ref={name} placeholder="nombre" className={classes.input_text}/> 
+                    <input className={classes.input_text} placeholder="direccion" ref={adress} type="text" />
+                    <Button >
+                        <Checkout number="5411 35884485" message={"hello "} name={name} adress={adress} />
+                    </Button>
+                    </div>
             </div>
             <Backdrop click={closeMenu}/>
             </>
