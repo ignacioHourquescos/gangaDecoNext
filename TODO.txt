@@ -66,7 +66,7 @@ https://www.wildsouls.gr/en
 PRESENTACION PAGINA
 _______________________________
 - hacemos recorrido de la pagina
-    - mostra decsunteos
+    - muestro descuentos
     - carrito de compras a wpp
 - la pagina principal agarra los 12 primeros articulos del sheets
 - sheets
