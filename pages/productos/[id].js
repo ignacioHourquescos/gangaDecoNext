@@ -122,10 +122,16 @@ function ProductDetailPage() {
                             <span>{itemCount}</span>
                             <button onClick={() => { sumarUnidad(itemCount) }}>+</button>   
                         </div>
-              
+                        
+                        {
+                            product.stock
+                        ?
+                        <h1 className={cardTitle}>Agotado</h1>
+                        :
                         <Button onClick={()=>{addToCartHandler()}}>
                          Agregar a Carrito
                         </Button>
+                        }
 
 
                     </div>

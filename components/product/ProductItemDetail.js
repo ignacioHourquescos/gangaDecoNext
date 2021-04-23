@@ -50,7 +50,7 @@ const ProductItemDetail = ({product}) =>{
     <div  key={product.id} className={styles.product_container}>
             
         <div className={styles.image_container}>
-            {product.stock==="no"? 
+            {product.stock==0? 
                     <div className={styles.sold_out}>
                         <h3>Agotado</h3>
                     </div>
@@ -77,11 +77,14 @@ const ProductItemDetail = ({product}) =>{
                     src={image} 
                     layout="fill"
                 />
-
+                {product.stock==0? 
+                    ""
+                :      
+            
                 <div className={styles.add_to_cart_icon1}>
-                    <div className={styles.add_to_cart_icon} onClick={()=>{addToCartHandler()}}>{addToCartIcon}</div>
-                   
+                    <div className={styles.add_to_cart_icon} onClick={()=>{addToCartHandler()}}>{addToCartIcon}</div> 
                 </div>
+                }
                 </>
 
             }

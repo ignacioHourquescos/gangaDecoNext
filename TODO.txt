@@ -65,11 +65,13 @@ https://www.wildsouls.gr/en
 
 PRESENTACION PAGINA
 _______________________________
+- gangas destacadas con las fomras
+- la pagina principal agarra los 12 primeros articulos del sheets vs random
 - hacemos recorrido de la pagina
-    - muestro descuentos
-    - carrito de compras a wpp
-- la pagina principal agarra los 12 primeros articulos del sheets
-- sheets
+    - muestro descuentos de gangas. Formato porcentaje
+    - boton carrito de compras a wpp
+    - si esta agotado o no
+- sheets (tema del codigo, muestro ganga, muestro no disponible)
 - mostrar /admin para uploader imagenes
 - fin    
 
