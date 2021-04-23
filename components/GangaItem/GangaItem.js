@@ -4,6 +4,7 @@ import classes from './GangaItem.module.scss'
 import {getImagesFromFirestore, getProducts, getSingleProductFromDatabase} from '../../backend/Sheets'
 import { useRouter } from 'next/router';
 import Image from 'next/image'
+
                                                                                         
 
 const GangaItem = (props) => {  
@@ -17,6 +18,8 @@ const GangaItem = (props) => {
         router.push(fullPath);
     }
 
+
+
     useEffect(()=>{
         getSingleProductFromDatabase(props.product.id.toString())
         .then(data=>{
@@ -27,17 +30,17 @@ const GangaItem = (props) => {
     })
         }
             )
-
+        
             
     return(
     <>
         {
             props.product.index % 2 != 0
             ?
-            <div className={classes.container_big}>
+            <div className={classes.container_big}  onClick={() => {goToProductHandler(props.product.id)}} >
 
                 <div className={classes.svg}>{props.svg}
-                <div className={classes.data_container}>
+                <div className={classes.data_container} >
                     <img className={classes.img} src={image}></img>
                     <p className={classes.title}>{props.product.title}</p>
                     <p className={classes.price}>${props.product.precio}</p>
@@ -53,7 +56,7 @@ const GangaItem = (props) => {
             </div>  
             :
 
-            <div className={classes.container_small}>
+            <div className={classes.container_small}   onClick={() => {goToProductHandler(props.product.id)}} >
                 <div className={classes.svg}>{props.svg} 
                 <div className={classes.data_container}>
                     <img className={classes.img} src={image}></img>

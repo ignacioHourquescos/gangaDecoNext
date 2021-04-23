@@ -17,7 +17,7 @@ export default function ProductList (props) {
 	useEffect(() => {
     
 		getProducts().then((result) => {
-            setProducts(result.slice(0,13));
+            setProducts(result.slice(0,12));
             console.log(result);
             setLoading(false);
         })
@@ -31,9 +31,11 @@ export default function ProductList (props) {
         <div className={styles.product_list}>
             
              {loading ? <Loader /> : <ProductItem className={styles.list} products={products} loading={loading} />} 
-             <div style={{paddingTop:"4rem"}}>
+
+        </div>
+
+        <div className={styles.container_fluid}>
              <Button link="/category"> ver mas productos</Button>
-             </div>
         </div>
         
         </>

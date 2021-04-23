@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import React, {useEffect, useState} from 'react';
 import styles from './ProductItemDetail.module.scss'
 import {getImagesFromFirestore, getSingleProductFromDatabase} from '../../backend/Sheets'
-import Loader from '../UI/Loader'
+import Loader2 from '../UI/Loader2'
 import 'antd/dist/antd.css';
 import Image from 'next/image';
 import { Spin } from 'antd';
@@ -49,49 +49,51 @@ const ProductItemDetail = ({product}) =>{
 
     <div  key={product.id} className={styles.product_container}>
             
-                <div className={styles.image_container}>
-                    {
-                            product.stock==="no"
-                        ? 
-                            <div className={styles.sold_out}>
-                                <h3>Agotado</h3>
-                            </div>
-                        :
-                                product.ganga!=""
-                            ?
-                                <div className={styles.special_offer}>{product.ganga}</div>
-                            :
-                        ''        
-                    }
+        <div className={styles.image_container}>
+            {product.stock==="no"? 
+                    <div className={styles.sold_out}>
+                        <h3>Agotado</h3>
+                    </div>
+                : product.ganga!=""?
+                        <div className={styles.special_offer}>{product.ganga}</div>
+                    :
+                ''        
+            }
+            {loading2
+                ?
+                    <div className={styles.loader}>
+                    <Spin/>
+{/*                     
+                    <Loader2/> */}
+                    </div> 
+                :
+                <>
+                {bubble  ? <div className={styles.bubble}><div className={styles.dot}></div></div> : ""}
+                
+                <Image className={styles.image}  
+                    onClick={() => {goToProductHandler(product.id)}} 
+                    alt={product.title} 
+                    priority={false} 
+                    src={image} 
+                    layout="fill"
+                />
 
-
-                    {
-                        loading2
-                        ?
-                        <div className={styles.loader}>
-                        <Spin/>
-                        </div>
-                        
-                        :
-                        <>
-                        {bubble  ? <div className={styles.bubble}><div className={styles.dot}></div></div> : ""}
-                        <Image className={styles.image}  onClick={() => {goToProductHandler(product.id)}} alt={product.title} priority={false} src={image} width={300} height={300} layout="fixed"/>
-                        <div className={styles.add_to_cart_icon1}>
-                            <div className={styles.add_to_cart_icon} onClick={()=>{addToCartHandler()}}>{addToCartIcon}</div>
-                           
-                        </div>
-                        </>
-
-                    }
-                       
+                <div className={styles.add_to_cart_icon1}>
+                    <div className={styles.add_to_cart_icon} onClick={()=>{addToCartHandler()}}>{addToCartIcon}</div>
+                   
                 </div>
-                <div className={styles.data_container}  onClick={() => {goToProductHandler(product.id)}}>
-                    <h3 className={styles.title}>{product.title}</h3>
-                    <h4 className={styles.price}>${product.precio}</h4>
-                    <h5 className={styles.id}>Codigo: {product.id}</h5>
-                </div>
-            </div>
-            </>
+                </>
+
+            }
+               
+        </div>
+        <div className={styles.data_container}  onClick={() => {goToProductHandler(product.id)}}>
+            <h3 className={styles.title}>{product.title}</h3>
+            <h4 className={styles.price}>${product.precio}</h4>
+            <h5 className={styles.id}>Codigo: {product.id}</h5>
+        </div>
+    </div>
+     </>
     )
 }
 

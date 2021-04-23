@@ -44,9 +44,9 @@ const GangaCarrousel = (props) =>{
         <div className={classes.container_main}>
         
             <Carousel  
-            infinite={true}
-            autoPlay={props.deviceType !== "mobile" ? true : false}
-            autoPlaySpeed={2000}
+             infinite={true}
+             autoPlay={props.deviceType !== "mobile" ? true : false}
+             autoPlaySpeed={2000}
             customTransition="transform 1000ms ease-in-out"
             transitionDuration={1000}
             infinite={true}
@@ -113,7 +113,7 @@ const svg =[
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1
+          items: 2
         }
       };
 

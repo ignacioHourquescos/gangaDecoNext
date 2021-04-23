@@ -5,6 +5,7 @@
     padding:10%;
     padding-top:0;
     height:100%;
+    width:100%;
     // background-image: linear-gradient(rgba(255, 255, 255, 0),  rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
     // background-color:  rgba(235, 235, 235, 0.295) ;
     display:flex;
@@ -51,4 +52,10 @@
 
   .carrousel_image{
       height:50vh;
+  }
+
+  .container_fluid{
+      width:100%;
+      display:flex;
+      justify-content: center;
   }

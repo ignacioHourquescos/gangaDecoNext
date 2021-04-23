@@ -4,6 +4,8 @@ import useAppContext from '../../context/AppContext';
 import Checkout from '../Checkout/checkout'
 import Backdrop from '../layout/Backdrop'
 import Button from '../UI/Button'
+import { Badge } from 'antd';
+import 'antd/dist/antd.css';
 
 
 const Cart = () => {
@@ -27,7 +29,9 @@ const Cart = () => {
         <div className={classes.icon} >
             { cart.length>0
             ?
+            <Badge count={5}>
             <div className={classes.icon2} onClick={toogleCartHandler}>{cartIcon}</div>
+            </Badge>
             :
             <div className={classes.icon} onClick={toogleCartHandler}>{cartIcon}</div>
             }
@@ -59,9 +63,8 @@ const Cart = () => {
                 </div>
 
                 <Button>
-                    <Checkout number="5411 65106333" message={"hello "} name={""}/>
+                    <Checkout number="5411 35884485" message={"hello "} name={""}/>
                 </Button>
-        
             </div>
             <Backdrop click={closeMenu}/>
             </>

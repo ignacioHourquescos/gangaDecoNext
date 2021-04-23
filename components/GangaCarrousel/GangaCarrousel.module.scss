@@ -5,13 +5,13 @@
 .container_main{
     width:100%;
     background: linear-gradient(rgba(238, 223, 190, 0.418), #ffffff00);
-    height:80vh;
+    height:65vh;
     padding:0 10%;
     transform:translateY(-120px);
     
     @media #{$mobile} {
         padding:0%;
-        height:70vh;
+        height:50vh;
         transform:translateY(-20px);
     }
 }
@@ -30,7 +30,7 @@
     //background-color: rgba(238, 223, 190, 0.418);
     //background: linear-gradient(rgba(238, 223, 190, 0.418), #ffffff00);
 
-   padding:0 5% ;
+   padding:0% ;
    height:100%;
 
    @media #{$mobile} {
