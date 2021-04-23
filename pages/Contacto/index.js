@@ -23,12 +23,10 @@ const comoComprar = () => {
                 <div className='col-12 text-center'>
                     <div className='d-inline-flex flex-column d-inline align-items-md-start'>
                         <div>
-                            <img className='mr-3' src="watsap.png"/>
-                            <p>11-3588-4485</p>
+                            <p><img className='mr-3' src="watsap.png"/>11-3588-4485</p>
                         </div>
                         <div>
-                            <img className='mr-3' src="mailGris.png"/>
-                            <p>mail@mail.com</p>    
+                            <p><img className='mr-3' src="mailGris.png"/>mail@mail.com</p>    
                         </div>
                     </div>
                 </div>
