@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
              <Cart/>
             <Component {...pageProps} />
             
-            <Wpp  number="5411 65106333" message={"hello "} />
+            <Wpp  number="5411 35884485" message={"hello "} />
             </AppWrapper>
             <Footer/>
     </Layout>

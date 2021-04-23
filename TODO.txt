@@ -63,9 +63,14 @@ TODO NACHO
 https://www.sevenmarkettt.com.ar/productos/acolchado-alaska-precio-lanzamiento/
 https://www.wildsouls.gr/en
 
+
+
+
+
+
 PRESENTACION PAGINA
-_______________________________
-- gangas destacadas con las fomras
+____________________________
+- gangas destacadas con las formas. imagenes 600px 600px
 - la pagina principal agarra los 12 primeros articulos del sheets vs random
 - hacemos recorrido de la pagina
     - muestro descuentos de gangas. Formato porcentaje
@@ -77,6 +82,22 @@ _______________________________
 - fin    
 
 
+-ganga
+-ganaga/admin
+- compartir excel
+- comparto covertir por lote de imagenes
+
+
+
+
+
 
 ELLAS
 pasar una foto para quienes Somos
+
+
+
+enrique costantini
+VIctoria seff
+
+Igncio
