@@ -8,9 +8,18 @@
     padding-right: 10% !important;
     padding-bottom: 80px;
     background-color: $violet;
+    @media #{$mobile} {
+        padding-bottom: 45px;
+       
+    }
 
     .logoFooter {
         width: 174px;
+        @media #{$mobile} {
+            width: 120px;
+           
+        }
+
     }
     .iconGrandeFooter {
         width: 40px;
@@ -18,12 +27,16 @@
         
         @media #{$mobile} {
             margin-top: 17px;
-           
+            width: 33px;
         }
     }
     .iconChicoFooter {
-        width: 33px;
+        width: 30px;
         margin-right: 15px;
+        
+        @media #{$mobile} {
+            width: 22px;
+        }
     }
     .tituloFooter {
         font-family: $font1;
@@ -32,6 +45,10 @@
         color: $white;
         margin-bottom: 32px;
 
+        @media #{$mobile} {
+        font-size: 14px;
+        }
+
     }
     li {
         font-family: $font1;
@@ -39,6 +56,10 @@
         font-size: 16px;
         color: $white;
         margin-bottom: 21px !important;
+        
+        @media #{$mobile} {
+            font-size: 14px;
+            }
     }
     ul, li{
         margin:0;
