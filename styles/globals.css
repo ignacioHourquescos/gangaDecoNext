@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family: 'Open Sans', 'Lato', sans-serif;
     color: #414141;
-    background-image: url("../public/Fondo web+color.png") !important;
+    background-image: url("/fondo.png") !important;
     background-size: cover !important;
     /* background-color: #e4f1f1; */
     width:100%;
