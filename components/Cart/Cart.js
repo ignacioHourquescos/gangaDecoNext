@@ -66,6 +66,8 @@ const Cart = () => {
                     :
                     <div classname={classes.cart_list}>
                         {cart.map(p=><div className={classes.item}>
+                          
+                         
                             <p className={classes.cart_item} key={p.id}>{p.quantity} X {p.title}</p>
                             <p>${p.quantity*p.price}</p>
                             <p className={classes.eliminate} onClick={eliminateItem}>{closeIcon}</p>

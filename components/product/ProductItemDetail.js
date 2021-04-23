@@ -25,7 +25,7 @@ const ProductItemDetail = ({product}) =>{
 
     //ADD TO CART HANDLER
     const addToCartHandler = () =>{
-        handleCart(1,{"id":product.id, "title":product.title, "price":product.precio});
+        handleCart(1,{"id":product.id, "title":product.title, "price":product.precio });
         setBubble(true);
     }
 
