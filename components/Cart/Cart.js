@@ -13,7 +13,12 @@ const Cart = () => {
     const [cartIsVisible, setCartIsVisible]=useState(false);
     const name = useRef(null);
     const adress = useRef(null);
-
+    const [selectedName, setSelectedName]=useState();
+    const [selectedAdress, setSelectedAdress] = useState();
+    //academind
+    const ContactForm =()=>{
+        event.preventDefault();
+    }
 
     const toogleCartHandler = () =>{
         setCartIsVisible((prevState)=>{setCartIsVisible(!prevState.cartIsVisible)})
@@ -28,11 +33,11 @@ const Cart = () => {
    
         const nameForm = useRef(null)
       
-        const handleClickEvent = () => {
-           const form = nameForm.current
-           alert(`${form['firstname'].value} ${form['lastname'].value}`)
-        }
+        const handleData = () => {
+          setSelectedName(name.current.value);
+          setSelectedAdress(adress.current.value);
 
+        }
 
     return(<>
         <div className={classes.icon} >
@@ -75,11 +80,13 @@ const Cart = () => {
 
                 <div className={classes.checkout_bottom}>
 
-                
-                    <input type="text" ref={name} placeholder="nombre" className={classes.input_text}/> 
-                    <input className={classes.input_text} placeholder="direccion" ref={adress} type="text" />
+                    <form>
+                    <input onChange={handleData} type="text" ref={name} placeholder="nombre" className={classes.input_text}/> 
+                    <input onChange={handleData} className={classes.input_text} placeholder="direccion" ref={adress} type="text" />
+                    </form>
+
                     <Button >
-                        <Checkout number="5411 35884485" message={"hello "} name={name} adress={adress} />
+                        <Checkout number="5411 35884485" message={"hello "} name={selectedName} adress={selectedAdress} />
                     </Button>
                     </div>
             </div>

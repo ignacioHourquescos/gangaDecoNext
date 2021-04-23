@@ -87,7 +87,7 @@ function ProductDetailPage() {
 
 
         loading
-        ?<h1>Loading....</h1>
+        ?<Spin/>
         :<div className={classes.container}>
             <div className='container-fluid'></div>
             <div className='row'>

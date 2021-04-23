@@ -26,7 +26,7 @@ const Footer= () =>{
                                     <img src="/logo2.png" className={classes.logoFooter} alt="logo ganga deco"/>
                                 </div>
                             </row>
-                                <img src='/instagram.png' className={classes.iconGrandeFooter} alt="instagram image"/>
+                                <img src="/instagram.png" className={classes.iconGrandeFooter} alt="instagram image"/>
                                 <img src="/facebook.png" className={classes.iconGrandeFooter} alt="facebook image"/>
                         </div>
                         
