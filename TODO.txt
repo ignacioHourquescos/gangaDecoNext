@@ -71,6 +71,7 @@ _______________________________
     - muestro descuentos de gangas. Formato porcentaje
     - boton carrito de compras a wpp
     - si esta agotado o no
+- compra en carrito de compras
 - sheets (tema del codigo, muestro ganga, muestro no disponible)
 - mostrar /admin para uploader imagenes
 - fin    

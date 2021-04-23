@@ -124,7 +124,7 @@ function ProductDetailPage() {
                         </div>
                         
                         {
-                            product.stock
+                            product.stock==0
                         ?
                         <h1 className={cardTitle}>Agotado</h1>
                         :
